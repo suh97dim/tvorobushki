@@ -1,0 +1,39 @@
+extends /layout/page
+
+block title
+    title Личный кабинет
+
+block variables
+    - var page = 'lk'
+
+block content
+    .container 
+        .row
+            .col 
+                h2.text-center.brown-text-linear Личный кабинет
+
+        ul.nav.nav-lk.row 
+            li.nav-lk-item.col-6.col-lg-3
+                a(href='#tab-1' data-bs-toggle="tab").nav-lk-link.active Мои чеки
+            li.nav-lk-item.col-6.col-lg-3
+                a(href='#tab-2' data-bs-toggle="tab").nav-lk-link   Мои заявки
+            li.nav-lk-item.col-6.col-lg-3.mt-24.mt-lg-0
+                a(href='#tab-3' data-bs-toggle="tab").nav-lk-link Мои призы
+            li.nav-lk-item.col-6.col-lg-3.mt-24.mt-lg-0 
+                a(href='#tab-4' data-bs-toggle="tab").nav-lk-link  Персональные данные
+        .row
+            .tab-content
+                    #tab-1.tab-pane.fade.lk-content.active.show
+                        include /modules/lk-tab-1
+                    #tab-2.tab-pane.fade.lk-content
+                        include /modules/lk-tab-2
+                    #tab-3.tab-pane.fade.lk-content
+                        include /modules/lk-tab-3
+                    #tab-4.tab-pane.fade.lk-content
+                        include /modules/lk-tab-4
+                    
+
+                                
+
+
+

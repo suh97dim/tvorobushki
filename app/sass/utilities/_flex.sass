@@ -1,0 +1,83 @@
+$order: ( 1, 2, 3, 4, 5, 6, 7, 8 )
+
+@each $breakpoint in map-keys($grid-breakpoints)
+	@include media-breakpoint-up($breakpoint)
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints)
+
+		.fxd#{$infix}-r
+			flex-direction: row
+		.fxd#{$infix}-c
+			flex-direction: column
+		.fxd#{$infix}-rr
+			flex-direction: row-reverse
+		.fxd#{$infix}-cr
+			flex-direction: column-reverse
+
+		.fxw#{$infix}-w
+			flex-wrap: wrap
+		.fxw#{$infix}-nw
+			flex-wrap: nowrap
+		.fxw#{$infix}-wr
+			flex-wrap: wrap-reverse
+		.fx#{$infix}-f
+			flex: 1 1 auto
+		.fxg#{$infix}-g0
+			flex-grow: 0
+		.fxg#{$infix}-g1
+			flex-grow: 1
+		.fxs#{$infix}-s0
+			flex-shrink: 0
+		.fxs#{$infix}-s1
+			flex-shrink: 1
+
+		.jc#{$infix}-fs
+			justify-content: flex-start
+		.jc#{$infix}-fe
+			justify-content: flex-end
+		.jc#{$infix}-c
+			justify-content: center
+		.jc#{$infix}-sb
+			justify-content: space-between
+		.jc#{$infix}-sa
+			justify-content: space-around
+
+		.ai#{$infix}-fs
+			align-items: flex-start
+		.ai#{$infix}-fe
+			align-items: flex-end
+		.ai#{$infix}-c
+			align-items: center
+		.ai#{$infix}-b
+			align-items: baseline
+		.ai#{$infix}-s
+			align-items: stretch
+
+		.ac#{$infix}-fs
+			align-content: flex-start
+		.ac#{$infix}-fe
+			align-content: flex-end
+		.ac#{$infix}-c
+			align-content: center
+		.ac#{$infix}-sb
+			align-content: space-between
+		.ac#{$infix}-sa
+			align-content: space-around
+		.ac#{$infix}-s
+			align-content: stretch
+
+		.as#{$infix}-a
+			align-self: auto
+		.as#{$infix}-fs
+			align-self: flex-start
+		.as#{$infix}-fe
+			align-self: flex-end
+		.as#{$infix}-c
+			align-self: center
+		.as#{$infix}-b
+			align-self: baseline
+		.as#{$infix}-s
+			align-self: stretch
+
+		@each $key in $order
+			.ord#{$infix}-#{$key}
+				order: $key

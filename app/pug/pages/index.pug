@@ -1,0 +1,216 @@
+extends /layout/page
+
+block title
+    title Главная страница
+
+block variables
+    - var page = 'index'
+block content
+    .main-banner
+    .container 
+        .col-12.col-sm-8 
+            .par-20.text-center.c-white 
+                span.label Махеевъ 
+                |— главный ингредиент праздника 
+            +img('main-text.png', 'Главное изображение','main-banner-text mt-40')
+            button.btn.btn-red.mx-auto.mt-50 
+                span.gold Зарегистрировать чек
+            .par-20.text-center.mt-60.c-green-middle Срок проведения акции: с 07 ноября 2023 года по 08 января 2024 года.
+
+    .container.mt-80.mt-lg-200
+        .row.how-do
+            .col-sm-12.text-center
+                h2.gold-lg Как участвовать 
+            .col-sm-6.col-lg-4
+                .how-do__item 
+                    +img('step-1.png')
+                    .step-count 01
+                    h4.gold.text-center Покупайте
+                    .par-20.text-center.c-green-light любой продукт бренда «Махеевъ» из <a href="/">списка</a> минимум на 300 руб в одном чеке. 
+                    .blur-bg
+            .col-sm-6.col-lg-4
+                .how-do__item  
+                    +img('step-2.png' )
+                    .step-count 02
+                    h4.gold.text-center Регистрируйте чек
+                    .par-20.text-center.c-green-light в личном кабинете на промо-сайте kupi-maheev.ru или через чат-бот Telegram<a target="_blank" href="https://t.me/kupi_maheev_bot"> @kupi_maheev_bot. </a>
+                    .blur-bg
+            .col-sm-6.col-lg-4.touch-center
+                .how-do__item 
+                    +img('step-3.png' )
+                    .step-count 03
+                    h4.gold.text-center Выигрывайте
+                    .par-20.text-center.c-green-light крутые призы от МахеевЪ.
+                    .blur-bg
+            .col-12 
+                button.btn.gold-border.mx-auto.mt-50 
+                    +img('icons/download.svg')
+                    span.gold.ml-15 Зарегистрировать чек
+    .container-fluid.py-80.py-md-100.chat-bot-bg 
+        .container 
+            .row
+                .col
+                    .chat-bot
+                        .row
+                            .col-12.col-md-5 
+                                h3 С чат-ботом <br> участвовать проще!
+                            .col-12.col-md-7  
+                                ol.list-group-numbered
+                                    li.list-group-item.chat-bot__li  <strong>Покупайте </strong> «МахеевЪ» в ТС «Монетка» и сохраняйте чеки с «7» ноября 2023 года по «08» января 2024 года
+                                    li.list-group-item.chat-bot__li  <strong>Сфотографируйте QR-код  </strong> чека и загрузите его на сайте или в чат-бот Telegram <a target="_blank" href="https://t.me/kupi_maheev_bot"> @kupi_maheev_bot. </a>
+                                    li.list-group-item.chat-bot__li  <strong> Найти бот  </strong>  можно по названию @kupi_maheev_bot, отправить любое сообщение в бот и следовать дальнейшим инструкциям.
+
+
+    .container
+        .row#prizes
+            .col-sm-12.text-center
+                h2.gold-lg Выигрывайте призы 
+            .col-12.col-sm-6.col-xs-12.col-md-4
+                .prize
+                    +img('prize-1.png','','img-fluid','')
+                    .prize-details  
+                        h4.gold Ежедневные
+                        ul
+                            li.win-prize.par-16 Сертификат 1000 Р в магазин «Монетка»
+            .col-12.col-sm-6.col-xs-12.col-md-4.mt-24.mt-sm-0
+                .prize
+                    +img('prize-2.png','','img-fluid','')
+                    .prize-details 
+                        h4.gold Еженедельные
+                        ul
+                            li.win-prize.par-16 Умная колонка Алиса
+                            li.win-prize.par-16 Пароочиститель KARCHER SC 1 EasyFix
+                            li.win-prize.par-16 Мини проектор
+            .col-12.col-sm-6.col-xs-12.col-md-4.touch-center.mt-24.mt-md-0
+                .prize 
+                    +img('prize-3.png','','img-fluid','')
+                    .prize-details 
+                        h4.gold Ежемесячные
+                        ul
+                            li.win-prize.par-16 Телевизор Яндекс с Алисой диаг 43,
+                            li.win-prize.par-16 Электрогриль Tefal Optigrill
+                            li.win-prize.par-16 Кофемашина брендированная
+
+            .col-12.mt-30.mt-md-70
+                .main-prize
+                    h3.gold.text-center Главный приз «Сертификат» на 
+                    +img('main-prize-main.png','','')
+    .container-fluid.green-bg.py-60.py-lg-100#winner 
+        .container
+            .row 
+                .col-sm-12
+                    h2.gold-lg.text-center Победители
+            .row 
+                .col-12.col-lg-8
+                    .winners-nav 
+                        button.table-btn.active(data-prize) 
+                            span.gold Ежедневный
+                        button.table-btn(data-prize)  
+                            span.gold Еженедельный
+                        button.table-btn(data-prize)  
+                            span.gold Суперприз
+                .col-12.col-lg-4.my-30.m-lg-0
+                    .winners-search 
+                        button.winners-search__btn 
+                        input( type="text" aria-controls="winners" id="search" placeholder="поиск по номеру телефона" class="mask-phone")
+            .row
+                .col
+
+                    table#winners 
+                        thead 
+                            tr.trow.th-row 
+                                th.th-column.th-data Дата розыгрыша
+                                th.th-column.th-name Имя
+                                th.th-column.th-city Город
+                                th.th-column.th-phone Номер телефона
+                        tbody 
+                            tr.trow.td-row 
+                                td.t-column.table-date 12.11.2022
+                                td.t-column.table-name В******
+                                td.t-column.table-city Санкт-Петербург
+                                td.t-column.table-phone +7 (999) *** ** 99)
+                            tr.trow.td-row 
+                                td.t-column.table-date 12.11.2022
+                                td.t-column.table-name В******
+                                td.t-column.table-city Санкт-Петербург
+                                td.t-column.table-phone +7 (999) *** ** 99)
+                            tr.trow.td-row 
+                                td.t-column.table-date 12.11.2022
+                                td.t-column.table-name В******
+                                td.t-column.table-city Санкт-Петербург
+                                td.t-column.table-phone +7 (999) *** ** 99)
+                            tr.trow.td-row 
+                                td.t-column.table-date 12.11.2022
+                                td.t-column.table-name В******
+                                td.t-column.table-city Санкт-Петербург
+                                td.t-column.table-phone +7 (999) *** ** 99)
+                            tr.trow.td-row 
+                                td.t-column.table-date 12.11.2022
+                                td.t-column.table-name В******
+                                td.t-column.table-city Санкт-Петербург
+                                td.t-column.table-phone +7 (999) *** ** 99)
+                            tr.trow.td-row 
+                                td.t-column.table-date 12.11.2022
+                                td.t-column.table-name В******
+                                td.t-column.table-city Санкт-Петербург
+                                td.t-column.table-phone +7 (999) *** ** 99)
+                            tr.trow.td-row 
+                                td.t-column.table-date 12.11.2022
+                                td.t-column.table-name В******
+                                td.t-column.table-city Санкт-Петербург
+                                td.t-column.table-phone +7 (999) *** ** 99)
+                            tr.trow.td-row 
+                                td.t-column.table-date 12.11.2022
+                                td.t-column.table-name В******
+                                td.t-column.table-city Санкт-Петербург
+                                td.t-column.table-phone +7 (999) *** ** 99)
+    .container-fluid.gold-bg.py-60.py-lg-100#faq  
+        .container
+            .row
+                .col-sm-12
+                    h2.c-brown.text-center Вопросы и ответы
+                .col-md-7 
+                    #faqData.qa-wrapper
+                        .qa-wrapper-scroll 
+                            .qa-item.default-active.active
+                                .qa-title В какие сроки проводится Акция? 
+                                .qa-details Призы, стоимость которых превышает 4 000 (четыре тысячи) руб., облагаются налогом в размере 35%.Налог на Еженедельные призы, Приз за участие в конкурсе в интерактиве и Главный приз оплачивает организатор акции, который, как налоговый агент, на основании поручения от победителя, удержит в соответствие с требованиями законодательства РФ НДФЛ по ставке 35%.Гарантированные приз в виде баллов на счет карты лояльности «Х5 Клуб» не облагаются налогом в соответствии со ст. 217 НК РФ.  
+                                    |ds 
+                                    |dsdsd 
+                                    <br> dsdsd
+                            .qa-item
+                                .qa-title Какой продукт необходимо купить, чтобы принять участие? 
+                                .qa-details
+                            .qa-item
+                                .qa-title До какого числа выдают призы 
+                                .qa-details
+                            .qa-item
+                                .qa-title В какие сроки проводится Акция?
+                                .qa-details
+                            .qa-item
+                                .qa-title Как я узнаю что стал участником акции?
+                                .qa-details
+                            .qa-item
+                                .qa-title Какие призы я могу получить за участие в акции?
+                                .qa-details
+                            .qa-item
+                                .qa-title Надо ли платить налоги с приза?
+                                .qa-details
+                            .qa-item
+                                .qa-title Какой продукт необходимо купить, чтобы принять участие? 
+                                .qa-details
+                            .qa-item
+                                .qa-title Какой продукт необходимо купить, чтобы принять участие? 
+                                .qa-details
+                .col-md-5 
+                    .contact-form
+                        h4.c-brown Нет ответа на ваш вопрос?
+                        .par-16.c-brown Отправьте нам сообщение, мы обязательно ответим 
+                        form(action="") 
+                            input(type="text" placeholder="Имя").text-input
+                            input(type="text" placeholder="Фамилия").text-input
+                            input(type="email" placeholder="E-mail").text-input
+                            textarea(placeholder="Текст сообщения")
+                            button.btn.green-btn.contact-form-btn 
+                                span.gold Отправить
+

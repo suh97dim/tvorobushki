@@ -1,0 +1,312 @@
+.nav-lk-link
+    padding: 25px 0px
+    border: none
+
+    display: flex
+    align-items: center
+    justify-content: center
+    font-weight: 600
+    font-size: 24px
+    opacity: 0.6
+    color: $brown
+    text-decoration: none
+    line-height: 120%
+    &.active
+        border-bottom: 2px solid $brown
+        opacity: 1
+.lk-content
+    background: linear-gradient(89deg, #8A4C07 0.93%, #C2671D 50.45%, #8A4C07 99.98%)
+    border-radius: 16px
+    padding: 60px
+    margin-top: 30px
+.lk-prize
+    border-radius: 24px
+    border: 1px solid #046221
+    background: linear-gradient(180deg, #013D14 0%, #023010 100%)
+    box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.25)
+    padding: 30px
+    display: flex
+    align-items: center
+    gap: 30px
+    img
+        width: 160px
+.lk-tab-title
+    font-size: 62px
+    margin-bottom: 50px
+    font-weight: 700
+.prize-blocked
+    opacity: 0.45
+.main-prize-lk
+    background-image: url('../img/bg/prize-bg.png'),linear-gradient(180deg, #013D14 0%, #023010 100%)
+    background-size: 100%
+    background-position: bottom center
+    background-repeat: no-repeat
+    border-radius: 24px
+    padding-top: 40px
+    border: 1px solid #046221
+
+    background-color: #023111
+
+    box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.25)
+.main-prize-lk
+    img
+        width: 600px
+        margin: 0 auto
+        display: block
+        padding-bottom: 50px
+.main-prize-btn
+    position: absolute
+    top: 30px
+    right: 30px
+    .btn-sm
+        margin-top: 0!important
+.lk-form
+    max-width: 540px
+    width: 100%
+    margin: 0 auto
+.lk-attention
+    padding: 32px 48px
+    background-color: #FFF6D8
+    border-radius: 10px
+    display: flex
+    align-items: flex-start
+    gap: 32px
+    width: 100%
+    max-width: 800px
+    margin: 0 auto
+.file-subtitle
+    color: $white
+    font-size: 16px
+    font-weight: 600
+    letter-spacing: -0.64px
+    margin-top: 6px
+.lk-step
+    display: flex
+    margin-top: 27px
+    position: relative
+    justify-content: center
+    &::before
+        left: 0
+        top: 50%
+        width: 100%
+        content: ''
+        position: absolute
+        border-bottom: 2px dashed #39714B
+.lk-step-box
+    z-index: 1
+    font-size: 18px
+    padding: 7px 28px 11px 28px
+    position: relative
+    background-color: #066524
+    border-radius: 60px
+    color: #fff
+    line-height: 1.2
+// #demo-basic
+//     width: 570px
+//     height: 320px
+.gggg
+    max-width: 100%
+.upload-photo
+    width: 100%
+    height: 100%
+    background: #FFF6D8
+    border-radius: 10px
+    font-size: 30px
+    font-weight: 500
+    color: #4A381D
+    letter-spacing: -0.6px
+    display: flex
+    flex-direction: column
+    gap: 40px
+    justify-content: center
+    align-items: center
+    max-width: 100%
+    padding: 100px 40px
+#file-receipt
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    position: absolute
+    z-index: -10
+
+li.li-lk
+    font-size: 18px
+    margin-bottom: 8px
+    margin-left: 20px
+    position: relative
+    // color: $green-light
+    color: $white
+    &::before
+        content: '•'
+        // color: $green-light
+        position: absolute
+
+        width: 2px
+        left: -20px
+#upload-image
+    width: 200px
+    margin: 0 auto
+.my-receipt-footer
+    border-radius: 24px
+    border: 1px solid #046221
+    background: linear-gradient(180deg, #013D14 0%, #023010 100%)
+    box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.25)
+    padding: 60px
+    display: flex
+    justify-content: center
+    flex-direction: column
+    margin-top: 70px
+    gap: 30px
+    .par-16
+        color: #689878
+        margin-bottom: 8px
+
+#step-2
+    opacity: 0
+    display: none
+.fiskal-link
+    font-size: 20px
+    font-weight: 700px
+    color: #fff
+    text-decoration: none
+    border-bottom: 1px dashed #fff
+
+.receved-code-table
+    width: 100%
+    tbody
+        tr
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+        a
+            color: $white
+.status
+    background-size: 16px
+    font-weight: 500
+    background-repeat: no-repeat
+    padding-left: 24px
+    background-position: center left
+.status_wait
+    background-image: url(../img/icons/wait.svg)
+    color: #689878
+.status_canceled
+    color: #FF6F6F
+    font-weight: 500
+    background-image: url(../img/icons/lose.svg)
+.status_success
+    color: #90F9B1
+    background-image: url(../img/icons/win.svg)
+.status_proof
+    color: #90F9B1
+    background-image: url(../img/icons/proof.svg)
+
+@media screen and (max-width: 1100px)
+    .lk-content
+        border-radius: 32px
+        padding: 30px
+        margin-top: 24px
+    .lk-prize
+        padding: 15px
+    .nav-lk-link
+        padding: 20px 0
+        border-radius: 16px
+    .main-prize-lk
+        background-size: 100%
+        background-position: bottom center
+        background-repeat: no-repeat
+        position: relative
+    .main-prize-lk
+        img
+            width: 54%
+            margin: 0 auto
+            display: block
+            padding-bottom: 45px
+    .upload-photo
+        padding-top: 80px
+        padding-bottom: 80px
+        height: auto
+    .upload-photo
+        padding-top: 50px
+        padding-bottom: 50px
+        height: auto
+        font-size: 24px
+        gap: 30px
+        img
+            width: 70px
+
+@media screen and (max-width: 900px)
+    .lk-prize
+        flex-direction: column
+        padding: 0 25px 30px 25px
+        gap: 10px
+        height: 100%
+    .receved-code-table
+        thead
+            th
+                padding: 19px 0
+        tbody
+            td
+                padding: 19px 0
+
+@media screen and (max-width: 768px)
+    .main-prize-lk
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        img
+            width: 54%
+            margin: 0 auto
+            display: block
+            padding-bottom: 5vw
+
+    .main-prize-btn
+        position: initial
+        .btn-sm
+            margin-top: 20px!important
+    .cr-boundary
+        max-width: 100%
+    .cr-viewport.cr-vp-square
+        width: 90%!important
+    .receved-code-table__wrapper
+        width: 100%
+        overflow-x: scroll
+    .receved-code-table
+        width: 100%
+        min-width: 600px
+    .receved-code-table
+        thead
+            th
+                font-size: 16px
+        tbody
+            td
+                font-size: 16px
+    .upload-photo
+        padding-top: 50px
+        padding-bottom: 50px
+        height: auto
+        font-size: 24px
+@media screen and (max-width: 575px)
+    .lk-content
+        padding: 30px 15px
+    .nav-lk-link
+        font-size: 16px
+    .main-prize-lk
+        background-size: 120%
+        background-position: bottom center
+        background-repeat: no-repeat
+    .main-prize-lk
+        img
+            width: 66%
+            margin: 0 auto
+            display: block
+            padding-bottom: 6vw
+    .lk-tab-title
+        font-size: 32px
+        margin-bottom: 24px
+    .lk-attention
+        padding: 20px
+        gap: 25px
+        img
+            width: 40px
+    .my-receipt-footer
+        padding: 30px
+        margin-top: 30px

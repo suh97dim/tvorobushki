@@ -1,0 +1,70 @@
+.row 
+    .col-12 
+        .lk-tab-title.text-center Мои призы
+.row 
+    .col-12.gold.text-center
+        h3 Ежедневные
+    .col-12.col-sm-6
+        .lk-prize.prize-blocked 
+            +img("lk-prizes/certificate.png",'Сертификат')
+            span
+                h5.gold Сертификат 1000 Р в магазин «Монетка» 
+                .par-16.c-white Может стать твоим!
+.row.mt-50
+    .col-12.gold.text-center
+        h3 Еженедельные
+    .col-12.col-sm-6
+        .lk-prize
+            +img("lk-prizes/speaker.png",'Умная колонка Алиса')
+            span
+                h5.gold Умная колонка Алиса 
+                .par-16.c-white Дата розыгрыша: 22.10.22
+                a.to-data-tab.btn-sm.gold-bg.mt-20( type="button" )  Заполнить данные
+    .col-12.col-sm-6.mt-12.mt-sm-0
+        .lk-prize.prize-blocked 
+            +img("lk-prizes/projector.png",'Проектор')
+            span
+                h5.gold Мини проектор 
+                .par-16.c-white Может стать твоим!
+    .col-12.col-sm-6.mt-12.mt-sm-24
+        .lk-prize.prize-blocked 
+            +img("lk-prizes/steam-cleaner.png",'Пароочиститель')
+            span
+                h5.gold Пароочиститель <br>KARCHER SC 1 EasyFix
+                .par-16.c-white Может стать твоим!
+.row.mt-50
+    .col-12.gold.text-center
+        h3 Ежемесячные
+    .col-12.col-sm-6
+        .lk-prize.prize-blocked 
+            +img("lk-prizes/coffee-machine.png",'Кофемашина')
+            span
+                h5.gold Кофемашина брендированная
+                .par-16.c-white Может стать твоим!
+    .col-12.col-sm-6.mt-12.mt-sm-0
+        .lk-prize
+            +img("lk-prizes/tv.png",'Телевизор')
+            span
+                h5.gold Телевизор Яндекс <br> с Алисой 43” 
+                .par-16.c-white Может стать твоим!
+                span.d-inline-block
+                    a.to-data-tab.btn-sm.gold-bg.mt-20( type="button")  Заполнить данные
+    .col-12.col-sm-6.mt-12.mt-sm-24
+        .lk-prize.prize-blocked 
+            +img("lk-prizes/grill.png",'Пароочиститель')
+            span
+                h5.gold Электрогриль Tefal Optigrill
+                .par-16.c-white Может стать твоим!
+.row.mt-50
+    .col-12.gold.text-center
+        h3 Главный приз
+    .col-12
+        .main-prize-lk
+            h4.gold.text-center «Сертификат» на
+            span.d-inline-block.main-prize-btn
+                a.to-data-tab.btn-sm.gold-bg.mt-20( type="button")  Заполнить данные
+            +img('main-prize-main.png','','')
+    .col-12
+        .main-prize-lk.prize-blocked 
+            h4.gold.text-center «Сертификат» на
+            +img('main-prize-main.png','','')

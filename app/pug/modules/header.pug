@@ -1,0 +1,42 @@
+header.page-header
+	.container.header-container 
+		.row.ai-c.jc-sb
+			.col-auto.d-xll-n
+				button.hamburger.js-hamburger.collapsed(type="button" data-toggle="collapse" data-target=".page-header-menu")
+					span.hamburger-box
+						span.hamburger-inner
+			.col-auto
+				a(href='/')
+					+img('logo.svg','Логотип','logo-img')
+			.col-auto.page-header-menu.collapse
+				if page == 'index'
+					ul.nav.nav-header
+						li.nav-item
+							a(href='').nav-link-header Правила
+						li.nav-item
+							a(href='#prizes' ).nav-link-header.mt-100 Призы
+						li.nav-item
+							a(href='#winner' ).nav-link-header Победители
+						li.nav-item
+							a(href='#faq' ).nav-link-header Вопросы и ответы
+				else
+					ul.nav.nav-header
+						li.nav-item
+							a(href='').nav-link-header Правила
+						li.nav-item
+							a(href='/index.html#prizes' ).nav-link-header.mt-100 Призы
+						li.nav-item
+							a(href='/index.html#winner' ).nav-link-header Победители
+						li.nav-item
+							a(href='/index.html#faq' ).nav-link-header Вопросы и ответы
+			.col-auto
+				if page == 'index'
+					a.link-gold(type="button" data-bs-toggle="modal" data-bs-target="#modal-enter")
+						+img('icons/user.svg','Войти','mr-10')
+						span.d-none.d-md-inline Личный кабинет
+				else 
+					a.link-gold(type="button")
+						+img('icons/logout.svg','Войти','mr-10')
+						span.d-none.d-md-inline Выйти
+
+

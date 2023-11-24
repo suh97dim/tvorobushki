@@ -1,0 +1,6 @@
+mixin icon(name, classes)
+	svg.icon(class= classes)
+		use(xlink:href=spritePath+ name)
+
+mixin icon-img(name, classes)
+	img.icon(src= imgIcons + name, alt= alt, class= classes)

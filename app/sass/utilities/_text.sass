@@ -1,0 +1,42 @@
+// -------------------------------------------------------------------------------------------
+
+@each $breakpoint in map-keys($grid-breakpoints)
+	+media-breakpoint-up($breakpoint)
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints)
+
+		@each $size in $font-size
+			.fs#{$infix}-#{$size}
+				font-size: #{$size}px
+				font-weight: 600
+
+// -------------------------------------------------------------------------------------------
+
+@each $color, $value in $color-custom
+	.c-#{"" + $color}
+		color: $value
+
+	a.c-#{"" + $color}:hover
+		color: $black
+		text-decoration: none
+
+// -------------------------------------------------------------------------------------------
+
+@each $breakpoint in map-keys($grid-breakpoints)
+	+media-breakpoint-up($breakpoint)
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints)
+
+		.ta#{$infix}-l
+			text-align: left
+
+		.ta#{$infix}-r
+			text-align: right
+
+		.ta#{$infix}-c
+			text-align: center
+
+
+
+
+
+
+

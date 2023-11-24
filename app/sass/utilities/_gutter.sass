@@ -1,0 +1,49 @@
+@each $breakpoint in map-keys($grid-breakpoints)
+	@include media-breakpoint-up($breakpoint)
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints)
+
+		@each $size in $gutter
+
+			.gx#{$infix}-#{$size}
+				margin-right: #{- calc($size / 2)}px
+				margin-left: #{- calc($size / 2)}px
+
+				> *
+					margin-right: #{calc($size / 2)}px
+					margin-left: #{calc($size / 2)}px
+
+
+				> .col,
+				> [class*="col-"]
+					padding-right: #{calc($size / 2)}px
+					padding-left: #{calc($size / 2)}px
+					margin-right: 0
+					margin-left: 0
+
+
+			.gy#{$infix}-#{$size}
+				margin-bottom: #{-$size}px
+
+				> *
+					margin-bottom: #{$size}px
+
+//--------------------------------------------------------------------------
+
+@include media-breakpoint-down(xs)
+	
+	.gx-40,
+	.gx-64
+		margin-right: -16px
+		margin-left: -16px
+
+		> *
+			margin-right: 16px
+			margin-left: 16px
+
+
+		> .col,
+		> [class*="col-"]
+			padding-right: 16px
+			padding-left: 16px
+			margin-right: 0
+			margin-left: 0

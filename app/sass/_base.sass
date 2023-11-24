@@ -1,0 +1,643 @@
+body
+	color: $black
+	font-family: 'Akrobat'
+	text-rendering: optimizeLegibility !important
+	-webkit-font-smoothing: antialiased !important
+	-moz-osx-font-smoothing: grayscale !important
+	background-color: $cream
+.container
+	max-width: 1224px!important
+	padding-left: 15px
+	padding-right: 15px
+.container-fluid
+	padding: 0
+.header-container
+	max-width: 1270px!important
+	position: relative
+.main-banner-text
+	width: 100%
+	
+.label
+	padding: 5px 10px 10px 10px
+	// background-color: $red
+.link-gold
+	background-image: linear-gradient(180deg, #FFF6D8 0%, #E5C796 100%)
+	color: transparent
+	background-clip: text
+	-webkit-background-clip: text
+	font-size: 20px
+	font-style: normal
+	font-weight: 700
+	display: block
+	&:hover
+		background-image: linear-gradient(180deg, #FFF6D8 0%, #F9C36B 100%)
+.gold
+	background-image: linear-gradient(180deg, #FFF6D8 0%, #E5C796 100%)
+	color: transparent
+	background-clip: text
+	-webkit-background-clip: text
+// .brown-bg-linear
+// 	background: linear-gradient(89deg, #8A4C07 0.93%, #C2671D 50.45%, #8A4C07 99.98%)
+.brown-text-linear
+	background: linear-gradient(180deg, #C56857 0%, #6C2B1F 100%)
+	color: transparent
+	background-clip: text
+	-webkit-background-clip: text
+.gold-text-linear
+	background: linear-gradient(354deg, #F5BC00 22.16%, #FFE281 74.95%)
+	color: transparent
+	background-clip: text
+	-webkit-background-clip: text
+a.link-gold
+	&:hover
+		color: transparent
+.main-banner
+	height: 1000px
+	height: 1000px
+	position: absolute
+	overflow: hidden
+	width: 100%
+	top: 0
+	right: 0
+	left: 0
+	display: block
+	margin: 0 auto
+	background-repeat: no-repeat
+	background-size: auto 1000px
+	background-position: 49vw 0%
+	position: absolute
+	top: 0
+	background-image: url(../img/bg/v.png)
+	pointer-events: none
+h2
+	font-size: 92px
+	font-style: normal
+	font-weight: 700
+	line-height: 120%
+	letter-spacing: -0.861px
+	margin-bottom: 50px
+h3
+	font-size: 42px
+	font-style: normal
+	font-weight: 700
+	line-height: 120%
+	letter-spacing: -1.84px
+	margin-bottom: 40px
+h4
+	font-size: 30px
+	font-style: normal
+	font-weight: 700
+	line-height: 120%
+	letter-spacing: -1.44px
+	margin-bottom: 15px
+h5
+	font-size: 24px
+	font-style: normal
+	font-weight: 700
+	line-height: 120%
+	letter-spacing: -1.84px
+	margin-bottom: 14px
+.par-20
+	font-size: 20px
+	font-style: normal
+	font-weight: 400
+	line-height: normal
+	letter-spacing: -0.4px
+.par-16
+	font-size: 16px
+	font-style: normal
+	font-weight: 400
+	line-height: normal
+	letter-spacing: -0.4px
+.par-14
+	font-size: 16px
+	font-style: normal
+	font-weight: 400
+	line-height: normal
+	letter-spacing: -0.4px
+.how-do__item
+	padding: 0 40px
+	box-sizing: border-box
+	position: relative
+	a
+		text-decoration: none
+		// border-bottom: 1px solid $green-light
+		// color: $green-light
+		&:hover
+			border-bottom: none
+	img
+		width: 100%
+.blur-bg
+	background: rgb(26, 190, 78)
+	filter: blur(100px)
+	width: 100px
+	height: 100px
+	/* margin: 0 auto; */
+	position: absolute
+	right: 0
+	left: 0
+	margin: auto
+	top: 0
+	top: 0
+	bottom: 0
+.step-count
+	font-family: LC-Chalk
+	color: #fff
+	font-size: 64px
+	top: 74px
+	z-index: -1
+	left: 0px
+	position: absolute
+.prize
+	height: 100%
+	border-radius: 24px
+	border: 1px solid #046221
+	background: linear-gradient(180deg, #013D14 0%, #023010 100%)
+	box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.25)
+#prizes
+	background-image: url('../img/bg/prize-bg2.png')
+	background-size: 870px
+	background-position-x: center
+	background-position-y: 49%
+	background-repeat: no-repeat
+.prize-details
+	padding: 25px
+	box-sizing: border-box
+.main-prize
+	background-image: url('../img/bg/prize-bg.png')
+	background-size: 100%
+	background-position: bottom center
+	background-repeat: no-repeat
+.main-prize
+	img
+		width: 600px
+		margin: 0 auto
+		display: block
+		padding-bottom: 50px
+ul
+	list-style-position: outside
+	list-style: none
+	padding: 0
+li.win-prize
+	
+	// padding-left: 15px
+	margin-bottom: 8px
+	margin-left: 20px
+	position: relative
+	// color: $green-light
+	&::before
+		content: '•'
+		// color: $green-light
+		position: absolute
+
+		width: 2px
+		left: -20px
+.qa-wrapper
+	background: $white
+	padding: 40px
+	border-radius: 32px
+	height: 620px
+
+.qa-wrapper-scroll
+	max-height: 100%
+	overflow-y: scroll
+	padding-right: 15px
+
+.qa-item
+	.qa-title
+		background-image: url(../img/icons/qa-open.svg)
+		background-repeat: no-repeat
+		background-position: 0 14px
+		cursor: pointer
+		// color: $green
+		padding: 10px 20px 10px 50px
+		font-weight: 600
+		font-size: 20px
+	.qa-details
+		padding: 0 20px 20px 50px
+		display: none
+		line-height: 130%
+		font-weight: 600
+		color: $black
+		font-size: 14px
+.qa-item.default-active
+	.qa-details
+		display: block
+.qa-item.active
+	.qa-title
+		font-weight: 700
+		background-image: url(../img/icons/qa-close.svg)
+
+.qa-wrapper-scroll
+	&::-webkit-scrollbar-button
+		background-image: url("")
+		background-repeat: no-repeat
+		width: 5px
+		height: 0px
+
+.qa-wrapper-scroll
+	&::-webkit-scrollbar-track
+		background-color: #ecedee
+
+.qa-wrapper-scroll
+	&::-webkit-scrollbar-thumb
+		-webkit-border-radius: 2px
+		border-radius: 2px
+		background-color: #023111
+
+.qa-wrapper-scroll
+	&::-webkit-scrollbar-thumb:hover
+		cursor: pointer !important
+		background-color: #023111
+
+.qa-wrapper-scroll
+	&::-webkit-resizer
+		background-image: url("")
+		background-repeat: no-repeat
+		width: 4px
+		height: 0px
+
+.qa-wrapper-scroll
+	&::-webkit-scrollbar
+		width: 4px
+.contact-form
+	margin-left: 80px
+.winners-nav
+	display: flex
+	gap: 9px
+.table-btn
+	padding: 25px 0 25px
+	border: none
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 100%
+	font-weight: 600
+	border-radius: 16px 16px 0px 0px
+	background: none
+	font-size: 20px
+	opacity: 0.6
+	color: $white
+	line-height: 120%
+	&.active
+		background-color: #02521C
+		color: $white
+		opacity: 1
+	&:hover
+		background-color: #02521C
+		opacity: 0.8
+.winners-search__btn
+	position: absolute
+	left: 30px
+	top: 0
+	bottom: 0
+	margin: auto 0
+	width: 20px
+	height: 20px
+	border-radius: 40px
+
+	border: none
+	background: none
+	background-image: url('../img/icons/search.svg')
+	background-repeat: no-repeat
+	background-position: center
+input#search
+	height: 55px
+	width: 100%
+	border-radius: 55px
+	border: none
+	background: none
+	border-radius: 32px
+	padding: 0 0 0 60px
+	outline: 1px solid #FFF6D8
+	font-size: 16px
+	color: #FFF6D8
+	line-height: 100%
+	letter-spacing: -0.32px
+	&:focus
+		o-color: #071C49
+	&::-webkit-input-placeholder
+		color: #FFF6D8
+	&::-moz-placeholder
+		color: #FFF6D8
+.winners-search
+	position: relative
+#winners_wrapper
+	border-radius: 0px 0px 32px 32px
+	background: #02521C
+	padding: 40px
+.dataTables_filter
+	display: none
+
+th
+	padding: 20px 0px 20px 40px
+	color: #689978
+	font-size: 20px
+	font-weight: 600
+	line-height: 120%
+
+td
+	padding: 19px 0px 16px 40px
+	font-size: 18px
+	line-height: 120%
+	color: $white
+	font-weight: 600
+thead
+	border-bottom: 2px solid $white
+.td-row
+	border-bottom: 1px solid rgba(0, 0, 0, 0.10)
+
+.table-date
+	width: 251px!important
+.th-name
+	width: 220px!important
+.th-city
+	width: 299px!important
+.th-phone
+	width: 335px!important
+
+#winner
+	width: 100%
+	background: linear-gradient(180deg, #013D14 0%, #023010 100%)
+a.page-link
+	display: flex
+	width: 48px
+	height: 48px
+	justify-content: center
+	align-items: center
+	border-radius: 48px!important
+	background: #04581F!important
+	color: #FFF6D8!important
+	border: none
+	font-size: 20px
+	&:hover
+		color: $white!important
+		// background-color: $green!important
+.page-item.active .page-link
+	// color: $green!important
+	background-color: #FFF6D8!important
+
+ul.pagination
+	display: flex
+	gap: 14px
+	margin-top: 31px
+.chat-bot
+	border-radius: 16px
+	background: linear-gradient(180deg, #D99B53 0%, #F9F1A1 63.02%, #B68F56 95.83%)
+	padding: 40px
+	h3
+		color:#3E3629
+.list-group-item
+	position: relative
+	padding: 0 0 0 70px
+	margin-bottom: 20px
+
+	&::before
+		width:44px
+		height: 44px
+		color: #000
+		font-size: 20px
+		font-weight: 600
+		letter-spacing: -0.4px
+		border: 1px solid #B7965A
+		border-radius: 22px
+		display: flex
+		justify-content: center
+		align-items: center
+		min-width: 44px
+		position: absolute
+		left: 0
+		top: 0
+
+.list-group-numbered
+	>.list-group-item
+		&::before
+			content: counters(section, ".")
+.chat-bot__li
+	font-size: 20px
+	color: #001005
+	line-height: 120%
+.chat-bot-bg
+	background-image: url('../img/bg/chat-bot-bg.png')
+	background-size: 1440px
+	background-repeat: no-repeat	
+	background-position: bottom center
+.list-group-item
+	a
+		color: #001005
+		text-decoration: none
+.tooltip-inner 
+	max-width: 350px
+	width: 350px
+
+.font-arial
+	font-family: Arial, Helvetica, sans-serif
+	font-weight: 500
+
+
+@media screen and (max-width: 1100px)
+	#prizes
+		background-image: url('../img/bg/prize-bg2.png')
+		background-size: 870px
+		background-position-x: center
+		background-position-y: 49%
+		background-repeat: no-repeat
+	.prize-details
+		padding: 25px
+		box-sizing: border-box
+	.main-prize
+		background-image: url('../img/bg/prize-bg.png')
+		background-size: 100%
+		background-position: bottom center
+		background-repeat: no-repeat
+	.main-prize
+		img
+			width: 54%
+			margin: 0 auto
+			display: block
+			padding-bottom: 45px
+	.qa-item
+		.qa-title
+			font-size: 16px
+			background-position: 0 10px
+			padding: 10px 20px 10px 40px
+		.qa-details
+			padding: 0 20px 20px 40px
+	.qa-wrapper
+		padding: 20px
+
+	.contact-form
+		margin-left: 10px
+	.winners-search
+		max-width: 320px
+		margin: 0 auto
+	.table-btn
+		padding: 20px 0
+		border-radius: 16px
+	#winners_wrapper
+		border-radius: 16px
+	.chat-bot-bg
+		background-image: url('../img/bg/chat-bot-bg.png')
+		background-size: 100%
+		background-repeat: no-repeat	
+		background-position: bottom center
+	.list-group-numbered
+		padding: 0
+	.main-banner
+		height: 1000px
+		height: 1000px
+		position: absolute
+		overflow: hidden
+		width: 100%
+		top: 0
+		right: 0
+		left: 0
+		display: block
+		margin: 0 auto
+		background-repeat: no-repeat
+		background-size: 60% auto
+		background-position: 55vw 0%
+		background-image: url(../img/bg/v.png)
+		position: absolute
+		top: 0
+		z-index: -1
+
+
+@media screen and (max-width: 768px)
+	h2
+		font-size: 62px
+	.how-do__item
+		padding: 0 30px
+	.step-count
+		font-size: 40px
+	.contact-form
+		margin-left: 20px
+	.contact-form
+		margin-left: 0
+		margin-top: 30px
+	.main-prize
+		img
+			width: 54%
+			margin: 0 auto
+			display: block
+			padding-bottom: 5vw
+	.touch-center
+		margin: 0 auto
+	#winners_wrapper
+		border-radius: 16px
+		overflow-x: scroll
+		padding: 25px
+	#winners
+		width: 100%
+		min-width: 600px
+	th
+		padding: 20px 0px 20px 20px
+
+
+	td
+		padding: 19px 0px 16px 20px
+	
+	.table-btn
+		padding: 14px 0 18px 0
+		border-radius: 16px
+	.chat-bot
+		padding: 30px
+@media screen and (max-width: 575px)
+	h2
+		font-size: 42px
+		margin-bottom: 24px
+	h3
+		font-size: 30px
+		margin-bottom: 12px
+	h4
+		font-size: 24px
+
+
+	.how-do__item
+		padding: 0
+		img
+			width: 100%
+			max-width: 300px
+			margin: 0 auto
+			display: block
+		.par-20
+			width: 100%
+			max-width: 320px
+			margin: 0 auto
+	.step-count
+		font-size: 30px
+	.prize
+		width: 100%
+		max-width: 360px
+		margin: 0 auto
+	.main-prize
+		background-image: url('../img/bg/prize-bg.png')
+		background-size: 120%
+		background-position: bottom center
+		background-repeat: no-repeat
+	.main-prize
+		img
+			width: 66%
+			margin: 0 auto
+			display: block
+			padding-bottom: 6vw
+	th
+		padding: 20px 0px 20px 00px
+		color: #689978
+		font-size: 16px
+
+	td
+		padding: 19px 0px 16px 00px
+		font-size: 16px
+		line-height: 120%
+		color: $white
+		font-weight: 600
+	.table-btn
+		font-size: 16px
+	.winners-nav
+		gap: 0
+
+	.chat-bot__li
+		font-size: 18px
+		color: #001005
+		line-height: 120%
+	.list-group-item
+		position: relative
+		padding: 0 0 0 50px
+		margin-bottom: 20px
+
+		&::before
+			width:36px
+			height: 36px
+			color: #000
+			font-size: 20px
+			font-weight: 600
+			letter-spacing: -0.4px
+			border: 1px solid #B7965A
+			border-radius: 22px
+			display: flex
+			justify-content: center
+			align-items: center
+			min-width: 36px
+			position: absolute
+			left: 0
+	.main-banner
+		position: relative
+		overflow: hidden
+		width: 100%
+		top: 0
+		height: auto
+		right: 0
+		left: 0
+		display: block
+		margin: 0 auto
+		background-repeat: no-repeat
+		background-size: 100% auto
+		background-position: top center
+		background-image: url(../img/bg/v.png)
+		top: 0
+		z-index: -1
+		height: 130vw
+		margin-top: -100px
+	.label
+		padding: 2px 5px 5px 5px

@@ -1,0 +1,60 @@
+@each $size in $width-height
+	.wh-#{$size}
+		width: #{$size}px
+		height: #{$size}px
+
+@each $width in $width
+	.w-#{$width}
+		width: #{$width}px
+
+@each $height in $height
+	.h-#{$height}
+		height: #{$height}px
+
+// --------------------------------------------------------------------------------------------
+
+@each $breakpoint in map-keys($grid-breakpoints)
+	+media-breakpoint-up($breakpoint)
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints)
+
+		@each $size in $width
+			.maw#{$infix}-#{$size}
+				max-width: #{$size}px
+
+			.miw#{$infix}-#{$size}
+				min-width: #{$size}px
+
+		@each $size in $height
+			.mih#{$infix}-#{$size}
+				min-height: #{$size}px
+
+// --------------------------------------------------------------------------------------------
+
+.maw-100
+	max-width: 100%
+.mah-100p
+	max-height: 100%
+.mih-100p
+	min-height: 100%
+
+.w-100p
+	width: 100%
+.h-100p
+	height: 100%
+
+.miw-0
+	min-width: 0
+
+.mih-0
+	min-height: 0
+
+.mih-100vh
+	min-height: 100vh
+
+@include media-breakpoint-down(sm)
+	.sm-w-100p
+		width: 100%
+
+@include media-breakpoint-down(xs)
+	.xs-w-100p
+		width: 100%

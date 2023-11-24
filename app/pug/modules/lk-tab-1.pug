@@ -1,0 +1,180 @@
+.row 
+    .col-12 
+        .lk-tab-title.text-center Зарегистрировать чек
+.row 
+    .col-12.gold.text-center.mb-40
+        .lk-step 
+            .lk-step-box Шаг 1. Загрузите фото
+//- .row#step-1
+//-     .col-12.col-md-5.col-lg-6
+//-         label.upload-photo(for="file-receipt") 
+//-             +img('icons/upload-receipt.svg')
+//-             |Загрузить фото чека
+//-         input#file-receipt(type="file" accept="image/*" )
+//-     .col-12.col-md-7.col-lg-6.mt-24.mt-md-0 
+//-         h5.gold К регистрации в Акции принимаются чеки, если:
+//-         ul
+//-             li.li-lk фото чека качественное, чек сфотографирован полностью, не стоит загружать фотографию только QR кода
+//-             li.li-lk данные, указанные на чеке, такие как дата покупки, время покупки, итого по сумме чека, №ФН, №ФД, №ФПД введены правильно
+//-             li.li-lk кассовый чек должен быть выбит кассиром в период c 11.10.2021 по 28.11.2021
+//-             li.li-lk все символы должны быть четко видны
+//-             li.li-lk наличие QR-кода на кассовом чеке обязательно, он должен быть читаемый
+//-             li.li-lk в чеке должно отображаться наименование Акционной продукции
+//- test
+.row#step-1
+    .col-12.col-lg-6
+        .file-upload
+            input.bootstrap-file-upload(type="file" data-browse-on-zone-click="true")
+        //- <div class="row mb-10">
+        //-                             <div class="col-lg-6 mb-30">
+        //-                                 <div class="file-upload">
+        //-                                     <input class="bootstrap-file-upload" type="file"
+        //-                                         data-browse-on-zone-click="true">
+        //-                                 </div>
+        //-                             </div>
+    .col-12.col-lg-6.mt-24.mt-md-0 
+        h5.gold К регистрации в Акции принимаются чеки, если:
+        ul
+            li.li-lk фото чека качественное, чек сфотографирован полностью, не стоит загружать фотографию только QR кода
+            li.li-lk данные, указанные на чеке, такие как дата покупки, время покупки, итого по сумме чека, №ФН, №ФД, №ФПД введены правильно
+            li.li-lk кассовый чек должен быть выбит кассиром в период c 11.10.2021 по 28.11.2021
+            li.li-lk все символы должны быть четко видны
+            li.li-lk наличие QR-кода на кассовом чеке обязательно, он должен быть читаемый
+            li.li-lk в чеке должно отображаться наименование Акционной продукции
+//- test
+
+.row#step-2
+    .col-12.d-flex.justify-content-center 
+        #img-crop
+
+    .col 
+        .row
+            .col-md-12.col-lg-3
+            .col-md-6.col-lg-3.mt-20 
+                button.btn-lk.btn-red#other-photo.mx-a.w-100
+                    span.gold Другое фото
+            .col-md-6.col-lg-3.mt-20 
+                button.btn-lk.btn-white.mx-a.w-100 Регистрация чека
+            .col-md-12.col-lg-3
+    .col-12.mt-60 
+        h5.gold.text-center Если QR-код не распознается и фискальные признаки не считываются, то введите данные вручную.
+        .d-flex.justify-content-center
+            a.fiskal-link.mx-a(type="button" data-bs-toggle="modal" data-bs-target="#modal-fiskal") Где найти фискальные данные на чеке?
+    .col
+        form.row.needs-validation.px-0.px-lg-80.mt-40(novalidate)
+            .col-sm-6.col-md-4.mb-24
+                input(type="text" placeholder="ФН" required ).form-control
+                .invalid-feedback Укажите ФН
+            .col-sm-6.col-md-4.mb-24
+                input(type="text" placeholder="ФД" required ).form-control
+                .invalid-feedback Укажите ФД
+            .col-sm-6.col-md-4.mb-24
+                input(type="text" placeholder="ФПД" required ).form-control
+                .invalid-feedback Укажите ФПД
+            .col-sm-6.col-md-4.mb-24
+                input(type="text" placeholder="Сумма покупки" required ).form-control
+                .invalid-feedback Укажите сумму покупки
+            .col-sm-6.col-md-4.mb-24
+                input(type="text" placeholder="Дата покупки" required ).form-control
+                .invalid-feedback Укажите дату покупки
+            .col-sm-6.col-md-4.mb-24
+                input(type="text" placeholder="Время покупки" required ).form-control
+                .invalid-feedback Укажите время покупки
+            .col-md-4  
+            .col-md-4.mb-24
+                button.btn-lk.btn-red.w-100.px-0#nalog(type="submit") 
+                    span.gold Сохранить данные
+            .col-md-4
+.row.mt-30.mt-md-70 
+    .col-12 
+        .lk-tab-title.text-center Зарегистрированные чеки
+.row 
+    .col-12 
+        .receved-code-table__wrapper
+            table#registered-receipts.receved-code-table
+                thead
+                    tr
+                        th.nowrap.date-appl Дата розыгрыша
+                        th.nowrap.num-appl Номер чека
+                        th.nowrap.date-event ФН, ФД, ФПД
+                        th.nowrap.type-event Фото чека
+                        th.status-event Статус
+                tbody
+                    tr
+                        td 14.12.2023
+                        td <span class="font-arial"> №</span> 12755246
+                        td 383732 / 344546 / ......
+                        td 
+                            a(href="img/fiskal.jpg" data-fancybox="image")
+
+                                |Смотреть
+                        td
+                            .status.status_wait В процессе
+                    tr
+                        td 14.12.2023
+                        td <span class="font-arial"> №</span> 12755246
+                        td 383732 / 344546 / ......
+                        td 
+                            a(href="img/fiskal.jpg" data-fancybox="image")
+
+                                |Смотреть
+                        td
+                            .status.status_proof Подтвержден
+                    tr
+                        td 14.12.2023
+                        td <span class="font-arial"> №</span> 12755246
+                        td 383732 / 344546 / ......
+                        td 
+                            a(href="img/fiskal.jpg" data-fancybox="image")
+
+                                |Смотреть
+                        td
+                            .status.status_canceled Отклонено
+                    tr
+                        td 14.12.2023
+                        td <span class="font-arial"> №</span> 12755246
+                        td 383732 / 344546 / ......
+                        td 
+                            a(href="img/fiskal.jpg" data-fancybox="image")
+
+                                |Смотреть
+                        td
+                            .status.status_wait В процессе
+                    tr
+                        td 14.12.2023
+                        td <span class="font-arial"> №</span> 12755246
+                        td 383732 / 344546 / ......
+                        td 
+                            a(href="img/fiskal.jpg" data-fancybox="image")
+
+                                |Смотреть
+                        td
+                            .status.status_wait В процессе
+                    tr
+                        td 14.12.2023
+                        td <span class="font-arial"> №</span> 12755246
+                        td 383732 / 344546 / ......
+                        td 
+                            a(href="img/fiskal.jpg" data-fancybox="image")
+
+                                |Смотреть
+                        td
+                            .status.status_wait В процессе
+                    tr
+                        td 14.12.2023
+                        td <span class="font-arial"> №</span> 12755246
+                        td 383732 / 344546 / ......
+                        td 
+                            a(href="img/fiskal.jpg" data-fancybox="image")
+
+                                |Смотреть
+                        td
+                            .status.status_wait В процессе
+.row 
+    .col 
+        .my-receipt-footer
+            +img('lk-footer.svg' )
+            span
+                .par-16 Чеки не суммируются, т.е. если в одном чеке акционной продукции менее, чем на 300 руб. он не будет участвовать в формировании заявок
+                .par-16 Заявка формируется в момент подтверждения чека Организатором.
+                .par-16 Каждая заявка участвует в розыгрыше каждого вида Приза до момента выигрыша или выхода за период сбора заявок на розыгрыш.

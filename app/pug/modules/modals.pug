@@ -1,0 +1,151 @@
+.modal#modal-enter
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                .modal-title Вход
+                form.row.needs-validation(novalidate)
+                    .col-12.mb-24
+                        input( placeholder="Номер телефона" required ).form-control.mask-phone
+                        .invalid-feedback Введите номер телефона
+                    .col-12.mb-24
+                        input(type="password" placeholder="Пароль" required ).form-control
+                        .invalid-feedback Введите пароль
+                        a(href="#modal-recovery").js-change-modal.modal-link.text-end.w-100 Забыли пароль? 
+                    .col-12.mb-24
+                        button.btn-lk.btn-red.w-100.px-0(type="submit") 
+                            span.gold Войти в кабинет
+                .row
+                    .col-12 
+                        .par-16.text-center.c-green-middle Если Вы впервые на сайте, то Вам необходимо 
+                    a(href="#modal-reg").js-change-modal.modal-link-lg.text-center
+                        span.gold Зарегистрироваться
+
+//- /.modal
+
+.modal#modal-reg
+    .modal-dialog.modal-lg.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                .modal-title.modal-title-reg Регистрация
+                form.row.needs-validation(novalidate)
+                    .col-sm-6.mb-24
+                        input(type="text" placeholder="Фамилия" required ).form-control
+                        .invalid-feedback Введите фамилию
+                    .col-sm-6.mb-24
+                        input(type="text" placeholder="Имя" required ).form-control
+                        .invalid-feedback Введите имя
+                    .col-sm-6.mb-24
+                        input(type="text" placeholder="Отчество" required ).form-control
+                        .invalid-feedback Введите отчество
+                    .col-sm-6.mb-xl-25
+                        .form-control-wrap.mb-22.radio-wrap
+                            .text-label Пол:
+                            label(for="male").radio-label
+                                input(type="radio" value="Муж" checked name="gender" id="male").radio-input 
+                                | Муж.
+                            label(for="female").radio-label
+                                input(type="radio" value="Жен" name="gender" id="female" ).radio-input
+                                | Жен.
+                    .col-sm-6.mb-24
+                        input(type="text" placeholder="Дата рождения" data-toggle="datepicker" required ).form-control
+                        .invalid-feedback Введите дату рождения
+                    .col-sm-6.mb-24
+                        input(type="text" placeholder="Город проживания" required ).form-control
+                        .invalid-feedback Введите дату город проживания
+                    .col-sm-6.mb-24
+                        input( placeholder="Номер телефона" required ).form-control.mask-phone
+                        .invalid-feedback Введите номер телефона
+                    .col-sm-6.mb-24
+                        input(type="email" placeholder="E-mail" required ).form-control
+                        .invalid-feedback Введите E-mail
+                    .col-sm-12.mb-6
+                        label.checkbox
+                            input(type="checkbox" required).radio-input.mr-10
+                            span.checkbox__text Ознакомлен и согласен <a href="#" class="label-text">пользовательским соглашением </a> и <a href="#" class="label-text">политикой конфиденциальности</a>
+                            .invalid-feedback Подтвердите согласие с пользовательским соглашением и политикой конфиденциальности
+                    .col-sm-12.mb-6
+                        label.checkbox
+                            input(type="checkbox" required).radio-input.mr-10
+                            span.checkbox__text Ознакомлен и согласен с <a href="#" class="label-text">правилами акции </a> 
+                            .invalid-feedback Подтвердите согласие с правилами акции
+                    .col-sm-12.mb-6
+                        label.checkbox
+                            input(type="checkbox" required).radio-input.mr-10
+                            span.checkbox__text Даю свое согласие на обработку <a href="#" class="label-text">персональных данных </a> 
+                            .invalid-feedback Подтвердите согласие на обработку персональных данных
+                    .col-sm-12.mb-6
+                        label.checkbox
+                            input(type="checkbox" required).radio-input.mr-10
+                            span.checkbox__text.c-white Мне уже есть 18 лет 
+                            .invalid-feedback Подтвердите возраст
+                    .col-12.col-sm-6.mt-24
+                        button.btn-lk.btn-red.w-100.px-0(type="submit") 
+                            span.gold Войти в кабинет
+                    .col-12.col-sm-6
+                        a(href="#modal-enter").js-change-modal.modal-link-lg.text-center.text-sm-start.mt-16.mt-sm-32
+                            span.gold Войти
+
+.modal#modal-recovery
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                .modal-title-sm Восстановление пароля
+                form.row.needs-validation(novalidate)
+                    .col-12.mb-24
+                        input( placeholder="Номер телефона" required ).form-control.mask-phone
+                        .invalid-feedback Введите номер телефона
+                    .col-12.mb-24
+                        button.btn-lk.btn-red.w-100.px-0(type="submit") 
+                            span.gold Восстановить пароль
+                .row
+                    .col-12 
+                    a(href="#modal-reg").js-change-modal.modal-link-lg.text-center
+                        span.gold Войти в кабинет
+
+.modal#modal-success-reg
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                h4.text-center
+                    span.gold Вы зарегистрировались <br> в акции!
+                .row.mt-12
+                    .col-12 
+                        .par-16.text-center.c-green-middle.fw-bolder На указанный вами телефон (79008987676) отправлен пароль для доступа в личный кабинет
+                .row.mt-24
+                    .col-12 
+                        button.btn-lk.btn-red.w-100.px-0(href="#modal-enter" type="button").js-change-modal.modal-link-lg.text-center
+                            span.gold Войти в кабинет
+
+.modal#modal-thanks
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                .modal-title Спасибо!
+                .row.mt-12
+                    .col-12 
+                        .par-16.text-center.c-green-middle.fw-bolder На указанный номер телефона отправлен новый пароль
+                .row.mt-24
+                    .col-12 
+                        button.btn-lk.btn-red.w-100.px-0(href="#modal-enter" type="button").js-change-modal.modal-link-lg.text-center
+                            span.gold Войти в кабинет
+
+.modal#modal-fiskal
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                h4.text-center
+                    span.gold Фискальные знаки на чеке
+                    +img("fiskal.jpg",'','img-fluid mt-24').
+                
