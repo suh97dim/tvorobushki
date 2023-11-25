@@ -6,17 +6,11 @@ block title
 block variables
     - var page = 'index'
 block content
-    .main-banner
     .container 
-        .col-12.col-sm-8 
-            .par-20.text-center.c-white 
-                span.label Махеевъ 
-                |— главный ингредиент праздника 
-            +img('main-text.png', 'Главное изображение','main-banner-text mt-40')
-            button.btn.btn-red.mx-auto.mt-50 
-                span.gold Зарегистрировать чек
-            .par-20.text-center.mt-60.c-green-middle Срок проведения акции: с 07 ноября 2023 года по 08 января 2024 года.
-
+        .row 
+            .col.d-flex.justify-content-center
+                +img('bg/main-banner-center.png','','','893')
+                +img('bg/main-banner-right.png','','main-banner-right','635')
     .container.mt-80.mt-lg-200
         .row.how-do
             .col-sm-12.text-center
