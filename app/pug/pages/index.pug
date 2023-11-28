@@ -9,93 +9,97 @@ block content
     .side-img-wrapper
         +img("main-banner-right.png",'','img-rigth')
         +img("main-banner-left.png",'','img-left')
-    .container 
-        .row 
-            .col.d-flex.align-items-center.flex-column
-                .main-banner-top-wrapper
-                    +img("main-banner-top.png",'','img-top')
-                .main-banner-bottom-wrapper
+    .container-fluid.main-block
+        .container 
+            .row 
+                .col.d-flex.align-items-center.flex-column
+                    .main-banner-top-wrapper
+                        +img("main-banner-top.png",'','img-top')
+                    .main-banner-bottom-wrapper
 
-                    +img("main-banner-bottom.png",'','img-bottom')
-            .col-12
-                .par-20.c-brown.text-center.mt-20 с 01 декабря 2023 года по 12 января 2024 года 
-                button.btn.btn-red.contact-form-btn.mx-a.mt-50 Отправить
+                        +img("main-banner-bottom.png",'','img-bottom')
+                .col-12
+                    .par-20.c-brown.text-center.mt-160.mt-lg-20 с 01 декабря 2023 года по 12 января 2024 года 
+                    button.btn.btn-red.mx-a.mt-30.mt-lg-50#reg-button(type="button" data-bs-toggle="modal" data-bs-target="#modal-reg") Зарегистрироваться
     .container-fluid.rules
         .container
-            .row
+            .row.pt-40
                 .col-sm-12.text-center
                     h2
                         span.gold-text-linear Правила акции
-                .col-sm-6.col-lg-4
-                    .d-flex
+                .col-sm-6.col-md-4
+                    .rules-item
                         +img('icons/rule-icon-1.svg','','rules-icon')
-                        .d-flex.flex-column.mt-50.ml-20
+                        .d-flex.flex-column.mt-20.ml-lg-20
                             h4 
                                 span.gold-text-linear 1. Купите
-                            .par-20.c-white минимум 5&nbsp;&laquo;Творобушков&raquo; в&nbsp;магазинах &laquo;Пятёрочка&raquo;
-                .col-sm-6.col-lg-4
-                    .d-flex
+                            .par-20.c-white минимум 5&nbsp;&laquo;Творобушков&raquo;<br> в&nbsp;магазинах &laquo;Пятёрочка&raquo;
+                .col-sm-6.col-md-4
+                    .rules-item.mt-30.mt-sm-0
                         +img('icons/rule-icon-2.svg','','rules-icon')
-                        .d-flex.flex-column.mt-50.ml-20
+                        .d-flex.flex-column.mt-20.ml-lg-20
                             h4 
                                 span.gold-text-linear 2. Зарегистрируйте
                             .par-20.c-white чек на&nbsp;промосайте <br> promo-tvorobushki.ru
-                .col-sm-6.col-lg-4.touch-center
-                    .d-flex
+                .col-sm-6.col-md-4.touch-center
+                    .rules-item.mt-30.mt-md-0
                         +img('icons/rule-icon-2.svg','','rules-icon')
-                        .d-flex.flex-column.mt-50.ml-20
+                        .d-flex.flex-column.mt-20.ml-lg-20
                             h4 
                                 span.gold-text-linear 3. Участвуйте
-                            .par-20.c-white в&nbsp;розыгрышах призов и&nbsp;фотоконкурсе в&nbsp;VK
+                            .par-20.c-white в&nbsp;розыгрышах призов <br> и&nbsp;фотоконкурсе в&nbsp;VK
 
                 .col-12 
                     button.btn-sm.btn-red.mx-a.mt-50 
                         +img('icons/download-rules.svg','','mr-15') 
                         | Полные правила акции
-    .container-fluid.win-prize.pt-100
-        .container
+    .container-fluid.win-prize
+        .container.pt-60.pt-md-100.position-relative
+            +img('/bg/chocolate-bg.png','','rules-bg')  
             .row
                 .col-sm-12.text-center
                     h2
-                        span.gold-text-linear Правила акции
-            .row.mt-100 
+                        div.gold-text-linear Выигрывайте Призы
+            .row.mt-40.pt-lg-100
                 .col-md-6.col-lg-4
                     .prize.text-center
                         +img("lk-prizes/lk-prize-1.png",'Сертификат') 
                         .par-20.c-cream Гарантированный призы
                         h3.mt-12  
-                            span.gold-text-linear 50 Р на телефон
+                            div.gold-text-linear 50 Р на телефон
                 .col-md-6.col-lg-4.mt-40.mt-md-0
                     .prize.text-center
                         +img("lk-prizes/lk-prize-2.png",'Сертификат') 
                         .par-20.c-cream Баллы на карту «Х5 Клуба
                         h3.mt-12 
-                            span.gold-text-linear 5000 баллов
+                            div.gold-text-linear 5000 баллов
                 .col-md-6.col-lg-4.mt-40.mt-lg-0.touch-center
                     .prize.text-center
-                        +img("lk-prizes/lk-prize-5.png",'Сертификат') 
+                        +img("lk-prizes/lk-prize-7.png",'Сертификат') 
                         .par-20.c-cream Специальные призы
                         h3.mt-12  
-                            span.gold-text-linear бытовая техника
-                .col-12.mt-24
-                    .main-prize-lk
+                            div.gold-text-linear бытовая техника
+                .col-12.mt-24.touch-center
+                    .main-prize
                         +img("lk-prizes/lk-main-prize.png",'Сертификат')
                         span
                             .main-prize-header.c-cream главный приз
                             .par-24.c-cream Сертификат на путешествие всей семьей номиналом 
                             .main-prize-nominal
-                                div.gold-text-linear 200&nbsp;000&nbsp;Рㅤ
+                                div.gold-text-linear 200&nbsp;000&nbsp;Р
         //- .container-fluid(style="mmargin-top:")
         //-     +img('/bg/tests.svg','','img-fluid w-100')
-    .container-fluid.photo-contest-index
+    .container-fluid.photo-contest-index.pb-50
         .container.position-relative
             .row
-                .col-12.col-sm-6 
+                .col-sm-5.col-lg-6
                     +img('photo-contest-img.png','','img-fluid')
-                .col-12.col-sm-6 
-                    h2.mt-90 
-                        div.brown-text-linear Участвуйте в&nbsp;фотоконкурсе&nbsp;ВК
-    .container-fluid.products.py-90
+                .col-sm-7.col-lg-6 
+                    h2.mt-sm-30.mt-lg-90.mb-20 
+                        div.brown-text-linear Участвуйте в <br>  фотоконкурсе&nbsp;ВК
+                    .par-24.c-brown и выигрывайте фотоаппарат мгновенной печати Polaroid
+                    a.btn.btn-red.mt-20.mt-lg-40 Участвововать
+    .container-fluid.products.py-60.py-lg-100
         .container.position-relative
             .row
                 .col.text-center
@@ -199,8 +203,9 @@ block content
 
 
 
-    .container-fluid.brown-bg-linear.py-60.py-lg-100#faq   
-        .container
+    .container-fluid.brown-bg-linear#faq
+        .container.py-60.py-lg-100.position-relative
+            +img('/bg/chocolate-bg.png','','faq-bg')   
             .row
                 .col-sm-12
                     h2.c-white.text-center Вопросы и ответы
@@ -246,6 +251,5 @@ block content
                             input(type="text" placeholder="Фамилия").text-input
                             input(type="email" placeholder="E-mail").text-input
                             textarea(placeholder="Текст сообщения")
-                            button.btn.btn-red.contact-form-btn 
-                                span.gold Отправить
+                            button.btn.btn-red.mt-20.mt-lg-40 Участвововать
 

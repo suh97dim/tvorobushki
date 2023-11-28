@@ -147,6 +147,7 @@ window.addEventListener("load", function () {
   $(".img-bottom").addClass('img-top-anim')
   $(".img-rigth").addClass('img-rigth-anim')
   $(".img-left").addClass('img-left-anim')
+  $("#reg-button").addClass('btn-anim')
   // $('#top').animate({
   //   opacity: 1,
   //   top: 0

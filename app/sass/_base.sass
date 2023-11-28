@@ -10,12 +10,27 @@ body
 	background-repeat: no-repeat
 	background-size: 1440px auto
 
+	
+
+.faq-bg
+	position: absolute
+	z-index: 0
+	left: -300px
+	top: -150px
+	width: 513px
+.rules-bg
+	position: absolute
+	z-index: 0
+	left: -230px
+	top: -160px
+	width: 513px
 .photo-contest-index
 	// background-image: url(../img/bg/photo-contest-bg.png)
 	// background-position: top center
 	// background-repeat: no-repeat
 	// background-size: 100% auto
 	background-color: #F5BC00
+	margin-top: -2px
 .winners-icon
 	width: 80px
 	height: 80px
@@ -44,9 +59,7 @@ body
 	background-size: 1440px auto
 .container-fluid
 	padding: 0
-.rules-icon
-	width: 84px
-	filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.75))
+
 #winner
 	background-image: url('../img/bg/winner-bg.jpg')
 	background-size: 1920px auto
@@ -54,17 +67,30 @@ body
 	background-repeat: no-repeat
 	background-color: #F5BC00
 .rules
-	background-image: url(../img/bg/rules-bg.svg)
+	background-color: #8A4C07
+	margin-top: -2px
+.rules-item
+	display: flex
+	img
+		width: 84px
+		height: 84px
+		filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.75))
+.main-block
+	background-image: url(../img/bg/rules-top-bg.svg)
 	background-size: 100% auto
-	background-position: top center
-	padding-top: 200px
+	background-position: bottom center
+	background-repeat: no-repeat
+	padding-bottom: 170px
+
 .win-prize
-	background-color:#8A4C07
-	background-image: url(../img/bg/tests.svg)
+	background-color: #8A4C07
+	background-image: url(../img/bg/photo-contest-bottom-bg.svg)
 	background-size: 100% auto
 	background-position: bottom center
 	background-repeat: no-repeat
 	bottom: 0
+	margin-top: -2px
+	
 
 .side-img-wrapper
 	width: 100%
@@ -303,10 +329,16 @@ h5
 	padding: 25px
 	box-sizing: border-box
 .main-prize
-	background-image: url('../img/bg/prize-bg.png')
-	background-size: 100%
-	background-position: bottom center
-	background-repeat: no-repeat
+	border-radius: 16px
+	border: 1px solid #C76C15
+	background: linear-gradient(107deg, #582111 0.49%, #B16527 49.21%, #582111 100%)
+	box-shadow: 0px 4px 68px 0px #DF863A
+	padding: 30px 40px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	gap: 30px
+	position: relative
 .main-prize-header
 	font-size: 60px
 	line-height: 120%
@@ -490,6 +522,11 @@ td
 	line-height: 120%
 	color: $white
 	font-weight: 600
+#tableWinners
+	td,th
+		color: $brown
+	thead
+		border-bottom: 2px solid $brown
 thead
 	border-bottom: 2px solid $white
 .td-row
@@ -595,6 +632,20 @@ ul.pagination
 		h2
 			font-size: 60px
 @media screen and (max-width: 1100px)
+	.rules-bg
+		position: absolute
+		z-index: 0
+		left: -400px
+		top: -160px
+		width: 513px
+	.rules-item
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		text-align: center
+	.main-block
+		padding-bottom: 120px
 	.photo-contest-index
 		h2
 			font-size: 40px
@@ -623,13 +674,7 @@ ul.pagination
 		transform: translate(830px) rotate(90deg)
 		text-align: center
 		opacity: 0
-	.img-left-anim
-		top: 40vw!important
-		width: 40%
-		transform: translate(-40vw) rotate(0deg)!important
-		opacity: 1!important
-		transition-duration: .7s
-		transition-timing-function: cubic-bezier(0.2, 1.01, 0.38, 1)
+
 	#img-rigth
 		width: 40%
 		top: 520px
@@ -641,8 +686,15 @@ ul.pagination
 		transform: translate(500px) rotate(90deg)
 		text-align: center
 		opacity: 0
+	.img-left-anim
+		top: 32vw!important
+		width: 40%
+		transform: translate(-40vw) rotate(0deg)!important
+		opacity: 1!important
+		transition-duration: .7s
+		transition-timing-function: cubic-bezier(0.2, 1.01, 0.38, 1)
 	.img-rigth-anim
-		top: 40vw!important
+		top: 27vw!important
 		transform: translate(40vw) rotate(0deg)!important
 		opacity: 1!important
 		transition-duration: .7s
@@ -675,11 +727,7 @@ ul.pagination
 	.prize-details
 		padding: 25px
 		box-sizing: border-box
-	.main-prize
-		background-image: url('../img/bg/prize-bg.png')
-		background-size: 100%
-		background-position: bottom center
-		background-repeat: no-repeat
+
 	.main-prize
 		img
 			width: 54%
@@ -734,8 +782,11 @@ ul.pagination
 
 @media screen and (max-width: 768px)
 	.photo-contest-index
+		.par-24
+			font-size: 19px
 		img
-			width: 1
+			width: 100%
+			max-width: 400px
 	.winners-icon
 		width: 60px
 		height: 60px
@@ -745,23 +796,27 @@ ul.pagination
 	.swiper-products-prev
 		width: 8px
 		height: 17px
-	#img-rigth
-		width: 60%
-		top: 520px
-		position: absolute
-		margin-left: auto
-		margin-right: auto
-		left: 0
-		right: 0
-		transform: translate(500px) rotate(90deg)
-		text-align: center
-		opacity: 0
-	.img-rigth-anim
-		top: 80vw!important
-		transform: translate(50vw) rotate(0deg)!important
+	.img-left-anim
+		top: 52vw!important
+		width: 40%
+		transform: translate(-48vw) rotate(0deg)!important
 		opacity: 1!important
 		transition-duration: .7s
-		width: 300px
+		transition-timing-function: cubic-bezier(0.2, 1.01, 0.38, 1)
+		width: 250px
+	.img-rigth-anim
+		top: 27vw!important
+		transform: translate(40vw) rotate(0deg)!important
+		opacity: 1!important
+		transition-duration: .7s
+		width: 40%
+		transition-timing-function: cubic-bezier(0.2, 1.01, 0.38, 1)
+	.img-rigth-anim
+		top: 50vw!important
+		transform: translate(55vw) rotate(15deg)!important
+		opacity: 1!important
+		transition-duration: .7s
+		width: 250px
 		transition-timing-function: cubic-bezier(0.2, 1.01, 0.38, 1)
 	.main-banner-top-wrapper
 		width: 100%
@@ -791,6 +846,7 @@ ul.pagination
 		margin-left: 0
 		margin-top: 30px
 	.main-prize
+		flex-direction: column
 		img
 			width: 54%
 			margin: 0 auto
@@ -816,7 +872,10 @@ ul.pagination
 	.chat-bot
 		padding: 30px
 @media screen and (max-width: 575px)
-
+	.photo-contest-index
+		
+	.main-block
+		padding-bottom: 80px
 	.rules-icon
 		width: 56px
 
@@ -846,17 +905,20 @@ ul.pagination
 		width: 100%
 		max-width: 360px
 		margin: 0 auto
+
+
 	.main-prize
-		background-image: url('../img/bg/prize-bg.png')
-		background-size: 120%
-		background-position: bottom center
-		background-repeat: no-repeat
-	.main-prize
+		max-width: 360px
+		margin: 0 auto
+		gap: 0px
+		.par-24
+			font-size: 18px
 		img
-			width: 66%
-			margin: 0 auto
+			width: 100%
 			display: block
-			padding-bottom: 6vw
+	.main-prize-header 
+		font-size: 36px
+		letter-spacing: -2px
 	th
 		padding: 20px 0px 20px 00px
 		font-size: 16px
@@ -870,16 +932,6 @@ ul.pagination
 		font-size: 16px
 	.winners-nav
 		gap: 0
-
-	.chat-bot__li
-		font-size: 18px
-		color: #001005
-		line-height: 120%
-	.list-group-item
-		position: relative
-		padding: 0 0 0 50px
-		margin-bottom: 20px
-
 		&::before
 			width: 36px
 			height: 36px
@@ -895,23 +947,9 @@ ul.pagination
 			min-width: 36px
 			position: absolute
 			left: 0
-	.main-banner
-		position: relative
-		overflow: hidden
-		width: 100%
-		top: 0
-		height: auto
-		right: 0
-		left: 0
-		display: block
-		margin: 0 auto
-		background-repeat: no-repeat
-		background-size: 100% auto
-		background-position: top center
-		background-image: url(../img/bg/v.png)
-		top: 0
-		z-index: -1
-		height: 130vw
-		margin-top: -100px
-	.label
-		padding: 2px 5px 5px 5px
+
+
+@media screen and (max-width: 330px)
+	.photo-contest-index
+		h2
+			font-size: 34px

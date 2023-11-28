@@ -11,8 +11,24 @@
     text-align: center
     border-radius: 4px
     font-size: 24px
+    text-transform: uppercase
     display: block
+    width: 100%
+    max-width: 343px
     font-weight: 700
+    letter-spacing: -0.48px
+.btn-anim
+    animation: btn_grow 2.3s infinite
+    &:hover
+        animation: none
+
+@keyframes btn_grow 
+    0% 
+        transform: scale3d(1, 1, 1)
+    50% 
+        transform: scale3d(1.1, 1.1, 1.1)
+    100% 
+        transform: scale3d(1, 1, 1)
 
 .btn-header
     height: 60px
@@ -36,7 +52,6 @@
 .btn-sm
     padding: 14px 10px 17px 10px
     font-size: 18px
-    border: none
     border-radius: 4px
     max-width: 300px
     width: 100%
@@ -65,18 +80,20 @@
     display: block
     &:hover
         background-color: #B4632E
-        color:$white
+        color: $white
 .btn-photo-contest
     position: absolute
     right: 12px
     top: 0
-    width:280px
+    width: 280px
 .btn-red
     background: linear-gradient(90deg, #BB1015 1.84%, #E31E24 100%)
     box-shadow: 0px 4px 60px 0px rgba(255, 191, 0, 0.52)
-    color:$white
+    border: 1px solid #FC3944
+    color: $white
     &:hover
-        opacity: 0.6
+        opacity: 0.9
+        color:$white
 .btn-white
     border: 2px solid $white
     background-color: transparent
@@ -184,7 +201,7 @@
         height: auto
         padding: 15px
         img
-            margin:0
+            margin: 0
     .btn-photo-contest
         width: 100%
         position: static
@@ -220,4 +237,5 @@
     .btn
         padding: 10px 0 15px 0
         font-size: 20px
-        width: 90%
+        width: 100%
+        max-width: 100%
