@@ -7,15 +7,16 @@ block variables
     - var page = 'index'
 block content
     .side-img-wrapper
-        img(src="../img/main-banner-right.png").img-rigth
-        img(src="../img/main-banner-left.png").img-left
+        +img("main-banner-right.png",'','img-rigth')
+        +img("main-banner-left.png",'','img-left')
     .container 
         .row 
             .col.d-flex.align-items-center.flex-column
                 .main-banner-top-wrapper
-                    img(src="../img/main-banner-top.png").img-top
+                    +img("main-banner-top.png",'','img-top')
                 .main-banner-bottom-wrapper
-                    img(src="../img/main-banner-bottom.png").img-bottom
+
+                    +img("main-banner-bottom.png",'','img-bottom')
             .col-12
                 .par-20.c-brown.text-center.mt-20 с 01 декабря 2023 года по 12 января 2024 года 
                 button.btn.btn-red.contact-form-btn.mx-a.mt-50 Отправить
@@ -51,7 +52,9 @@ block content
                     button.btn-sm.btn-red.mx-a.mt-50 
                         +img('icons/download-rules.svg','','mr-15') 
                         | Полные правила акции
-            .row.mt-100
+    .container-fluid.win-prize.pt-100
+        .container
+            .row
                 .col-sm-12.text-center
                     h2
                         span.gold-text-linear Правила акции
@@ -82,16 +85,16 @@ block content
                             .par-24.c-cream Сертификат на путешествие всей семьей номиналом 
                             .main-prize-nominal
                                 div.gold-text-linear 200&nbsp;000&nbsp;Рㅤ
-        .container-fluid
-            +img('/bg/tests.svg','','img-fluid w-100')
-    //- .container-fluid.py-90.photo-contest-index
-    //-     .container.position-relative
-    //-         .row
-    //-             .col-12.col-sm-6 
-    //-                 +img('photo-contest-img.png','','img-fluid')
-    //-             .col-12.col-sm-6 
-    //-                 h2.mt-90 
-    //-                     div.brown-text-linear Участвуйте в&nbsp;фотоконкурсе&nbsp;ВК
+        //- .container-fluid(style="mmargin-top:")
+        //-     +img('/bg/tests.svg','','img-fluid w-100')
+    .container-fluid.photo-contest-index
+        .container.position-relative
+            .row
+                .col-12.col-sm-6 
+                    +img('photo-contest-img.png','','img-fluid')
+                .col-12.col-sm-6 
+                    h2.mt-90 
+                        div.brown-text-linear Участвуйте в&nbsp;фотоконкурсе&nbsp;ВК
     .container-fluid.products.py-90
         .container.position-relative
             .row
