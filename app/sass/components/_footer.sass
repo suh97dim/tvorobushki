@@ -11,14 +11,34 @@ footer
     color: #819086
     text-align: center
     margin-top: 50px
+a.footer-link-lg
+    font-size: 24px
+    color: $brown
+    text-decoration: none
+    display: block
+    font-weight: 700
+    &:hover
+        color: $brown
+        opacity: 0.8
+a.footer-link-phone
+    font-size: 62px
+    color: $brown
+    text-decoration: none
+    display: block
+    font-weight: 700
+    &:hover
+        color: $brown
+        opacity: 0.8
 a.footer-link
-    font-size: 14px
-    color: #819086
+    font-size: 16px
+    color: $brown
+    text-decoration: none
     display: block
     text-align: center
+    font-weight: 600
     margin-top: 40px
     &:hover
-        color:#819086
+        color: $brown
         opacity: 0.8
 a.footer-link:nth-child(2)
     margin-top: 20px
@@ -52,21 +72,24 @@ a.footer-link:nth-child(2)
 
 
             
-@media screen and (max-width: 1023px)
+@media screen and (max-width: 1100px)
+    a.footer-link-lg
+        font-size: 20px
+
     .footer-link
         font-size: 18px
 @media screen and (max-width: 767px)
     .footer-links
         justify-content: space-around
+    a.footer-link-phone 
+        font-size: 42px
 @media screen and (max-width: 575px)
     .footer-dest
         font-size: 14px
-        color: #819086
         text-align: center
         margin-top: 20px
     a.footer-link
         font-size: 14px
-        color: #819086
         display: block
         text-align: center
         margin-top: 25px

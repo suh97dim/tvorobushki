@@ -1,0 +1,137 @@
+.row.mt-40.mt-md-0
+    .col 
+        .lk-tab-title.text-center
+            span.gold-text-linear Персональные данные
+.row 
+    .col 
+        .row.lk-form 
+            .col-sm-6.mb-24
+                input(type="text" placeholder="Фамилия" disabled readonly required value="Иванов").form-control 
+                .invalid-feedback Введите фамилию
+            .col-sm-6.mb-24
+                input(type="text" placeholder="Имя" disabled readonly  required value="Дмитрий").form-control
+                .invalid-feedback Введите имя
+            .col-sm-6.mb-24
+                input(type="text" placeholder="Отчество" disabled readonly required value="Алексеевич").form-control
+                .invalid-feedback Введите отчество
+            .col-sm-6.mb-xl-25
+                .form-control-wrap.mb-22.radio-wrap
+                    .text-label Пол:
+                    label(for="male").radio-label
+                        input(type="radio" value="Муж" disabled readonly checked name="gender" id="male").radio-input 
+                        | Муж.
+                    label(for="female").radio-label
+                        input(type="radio" value="Жен" disabled readonly name="gender" id="female" ).radio-input
+                        | Жен.
+            .col-sm-6.mb-24
+                input(type="text" placeholder="Дата рождения" disabled readonly data-toggle="datepicker" required value="08.22.2023").form-control
+                .invalid-feedback Введите дату рождения
+            .col-sm-6.mb-24
+                input(type="text" placeholder="Город проживания" disabled readonly required value="Москва").form-control
+                .invalid-feedback Введите город проживания
+            .col-sm-6.mb-24
+                input( placeholder="Номер телефона" disabled readonly required value="88805553535").form-control.mask-phone
+                .invalid-feedback Введите номер телефона
+            .col-sm-6.mb-24
+                input(type="email" placeholder="E-mail" disabled readonly required value="user@mail.ru").form-control
+                .invalid-feedback Введите E-mail
+
+.row.mt-24 
+    .col
+        .lk-attention
+            +img("icons/attention.svg" )
+            .par-16.c-brown.fw-semibold Персональные данные требуются в соответствии законом для уплаты налогов при получении призов на общую <strong>сумму свыше 4000 рублей</strong>. Налог оплачивает Организатор.<br> Если общая сумма призов составляет меньше 4000 рублей — добавлять персональные данные не обязательно. Для получения призов на сумму более 4000 рублей предоставление персональных данных является обязательным.
+.row.mt-30.mt-md-60 
+    .col
+        .lk-form
+            h3
+                span.gold-text-linear Регистрационные данные:
+            form.row.needs-validation(novalidate)
+                .col-sm-6.mb-24
+                    input(type="text" placeholder="Фамилия" required ).form-control
+                    .invalid-feedback Введите фамилию
+                .col-sm-6.mb-24
+                    input(type="text" placeholder="Имя" required ).form-control
+                    .invalid-feedback Введите имя
+                .col-sm-6.mb-24
+                    input(type="text" placeholder="Отчество" required ).form-control
+                    .invalid-feedback Введите отчество
+                .col-sm-6.mb-xl-25
+                    .form-control-wrap.mb-22.radio-wrap
+                        .text-label Пол:
+                        label(for="male").radio-label
+                            input(type="radio" value="Муж" checked name="gender" id="male").radio-input 
+                            | Муж.
+                        label(for="female").radio-label
+                            input(type="radio" value="Жен" name="gender" id="female" ).radio-input
+                            | Жен.
+                .col-sm-6.mb-24
+                    input(type="text" placeholder="Дата рождения" data-toggle="datepicker" required ).form-control
+                    .invalid-feedback Введите дату рождения
+                .col-sm-6.mb-24
+                    input(type="text" placeholder="Город проживания" required ).form-control
+                    .invalid-feedback Введите город проживания
+                .col-sm-6.mb-24
+                    input( placeholder="Номер телефона" required ).form-control.mask-phone
+                    .invalid-feedback Введите номер телефона
+                .col-sm-6.mb-24
+                    input(type="email" placeholder="E-mail" required ).form-control
+                    .invalid-feedback Введите E-mail
+                .col-sm-12.mb-24
+                    button.btn-lk.btn-red.w-100.px-0(type="submit")  Сохранить данные
+.row.mt-20.mt-md-40 
+    .col
+        .lk-form
+            h3
+                span.gold-text-linear Данные для уплаты налогов:
+            h5.c-white.text-transform-none Первая страница паспорта
+            form.row.needs-validation(novalidate)
+                .col-sm-4.mb-24
+                    input(type="number" placeholder="Серия" required ).form-control
+                    .invalid-feedback Введите cерию
+                .col-sm-4.mb-24
+                    input(type="number" placeholder="Номер" required ).form-control
+                    .invalid-feedback Введите номер
+                .col-sm-4.mb-24
+                    input(type="text" placeholder="Дата выдачи" data-toggle="datepicker" required).form-control
+                    .invalid-feedback Введите дату выдачи
+                .col-sm-12.mb-32
+                    input(type="text" placeholder="Кем выдан" required ).form-control
+                    .invalid-feedback Кто выдал паспорт?
+
+                h5.c-white.text-transform-none Адрес прописки
+                .col-sm-6.mb-24
+                    input(type="text" placeholder="Населенный пункт" required ).form-control
+                    .invalid-feedback Введите населенный пункт
+                .col-sm-6.mb-24
+                    input(type="text" placeholder="Улица" required ).form-control
+                    .invalid-feedback Введите улицу
+                .col-sm-4.mb-24
+                    input(type="number" placeholder="Номер " required ).form-control
+                    .invalid-feedback Введите номер дома
+                .col-sm-4.mb-24
+                    input(type="number" placeholder="Номер строения" required ).form-control
+                    .invalid-feedback Введите номер строения
+                .col-sm-4.mb-24
+                    input(type="number" placeholder="Номер квартиры" required ).form-control
+                    .invalid-feedback Введите номер квартиры
+                .col-sm-6.mb-24
+                    .upload-one
+                        <input invalid-custom="file-1" class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
+                        .file-subtitle Фото паспорта лицевая сторона
+                        .invalid-feedback(invalid-customs="file-1") Загрузите фото
+                .col-sm-6.mb-24
+                    .upload-one
+                        <input invalid-custom="file-2" class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
+                        .file-subtitle Фото паспорта, прописка
+                        .invalid-feedback(invalid-customs="file-2") Загрузите фото
+                .col-sm-6.mb-24
+                    input(type="number" placeholder="ИНН" required).form-control
+                    .invalid-feedback Введите ИНН
+                .col-sm-6.mb-24
+                    .upload-one
+                        <input invalid-custom="file-3"  class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
+                        .invalid-feedback(invalid-customs="file-3") Загрузите фото
+                .col-sm-12.mb-24
+                    button.btn-lk.btn-red.w-100.px-0#nalog(type="submit")  Сохранить данные
+

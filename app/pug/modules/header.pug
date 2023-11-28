@@ -14,7 +14,7 @@ header.page-header
 						li.nav-item
 							a(href='/index.html').nav-link-header Главная
 						li.nav-item
-							a(href='').nav-link-header Правила
+							a(href="upload/rules.pdf").nav-link-header Правила
 						li.nav-item
 							a(href='#prizes' ).nav-link-header.mt-100 Призы
 						li.nav-item
@@ -26,7 +26,7 @@ header.page-header
 						li.nav-item
 							a(href='/index.html').nav-link-header Главная
 						li.nav-item
-							a(href='').nav-link-header Правила
+							a(href="upload/rules.pdf").nav-link-header Правила
 						li.nav-item
 							a(href='/index.html#prizes' ).nav-link-header.mt-100 Призы
 						li.nav-item
@@ -36,11 +36,12 @@ header.page-header
 			.col-auto
 				if page == 'index'
 					a.btn-header(type="button" data-bs-toggle="modal" data-bs-target="#modal-enter")
-						+img('icons/user.svg','Войти','mr-10')
+						+img('icons/user.svg','Войти')
 						span.d-none.d-md-inline Личный кабинет
 				else 
-					a.link-gold(type="button")
-						+img('icons/logout.svg','Войти','mr-10')
+					a.btn-header(href="#" onclick="logout();")
+						+img('icons/logout.svg','выйти')
 						span.d-none.d-md-inline Выйти
+
 
 

@@ -9,6 +9,127 @@ body
 	background-position: top center
 	background-repeat: no-repeat
 	background-size: 1440px auto
+
+.photo-contest-index
+	// background-image: url(../img/bg/photo-contest-bg.png)
+	// background-position: top center
+	// background-repeat: no-repeat
+	// background-size: 100% auto
+	background-color: #F5BC00
+.winners-icon
+	width: 80px
+	height: 80px
+.swiper-products
+	overflow: hidden
+.swiper-products-prev,
+.swiper-products-next
+	width: 18px
+	height: 37px
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: contain
+	top: 50%
+	position: absolute
+	transform: translateY(-50%)
+.swiper-products-next
+	background-image: url(../img/icons/right-arrow.svg)
+	right: -50px
+.swiper-products-prev
+	background-image: url(../img/icons/left-arrow.svg)
+	left: -50px
+.products
+	background-image: url(../img/bg/bg.jpg)
+	background-position: top center
+	background-repeat: no-repeat
+	background-size: 1440px auto
+.container-fluid
+	padding: 0
+.rules-icon
+	width: 84px
+	filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.75))
+#winner
+	background-image: url('../img/bg/winner-bg.jpg')
+	background-size: 1920px auto
+	background-position: top center
+	background-repeat: no-repeat
+	background-color: #F5BC00
+.rules
+	background-image: url(../img/bg/rules-bg.svg)
+	background-size: 100% auto
+	background-position: top center
+	padding-top: 200px
+.side-img-wrapper
+	width: 100%
+	height: 1000px
+	overflow: hidden
+	position: absolute
+	pointer-events: none
+	top: 0
+.main-banner-top-wrapper
+	width: 630px
+	height: 130px
+	position: relative
+	img
+		width: 100%
+		position: absolute
+		top: -300px
+
+.main-banner-bottom-wrapper
+	width: 893px
+	height: 206px
+	position: relative
+	img
+		width: 100%
+		position: absolute
+		top: 300px
+.img-left
+	width: 470px
+	top: 480px
+	position: absolute
+	margin-left: auto
+	margin-right: auto
+	left: 0
+	right: 0
+	transform: translate(-800px) rotate(-90deg)
+	text-align: center
+	opacity: 0
+.img-rigth
+	width: 635px
+	top: 320px
+	position: absolute
+	margin-left: auto
+	margin-right: auto
+	left: 0
+	right: 0
+	transform: translate(830px) rotate(90deg)
+	text-align: center
+	opacity: 0
+.img-left-anim
+	top: 380px!important
+
+	transform: translate(-520px) rotate(0deg)!important
+	opacity: 1!important
+	transition-duration: .7s
+	transition-timing-function: cubic-bezier(0.2, 1.01, 0.38, 1)
+.img-rigth-anim
+	top: 220px!important
+	left: 0px!important
+	transform: translate(530px) rotate(0deg)!important
+	opacity: 1!important
+	transition-duration: .7s
+	transition-timing-function: cubic-bezier(0.2, 1.01, 0.38, 1)
+
+.img-top-anim
+	top: 0!important
+	opacity: 1!important
+	transition-duration: 0.7s
+	width: 300px
+	transition-timing-function: cubic-bezier(0.2, 1.01, 0.38, 1)
+
+.img-top,.img-bottom
+	opacity: 0
+.text-transform-none
+	text-transform: none
 .container
 	max-width: 1224px!important
 	padding-left: 15px
@@ -16,42 +137,22 @@ body
 .main-banner-right
 	position: absolute
 	z-index: -1
-.container-fluid
-	padding: 0
+
 .header-container
 	max-width: 1270px!important
 	position: relative
 .main-banner-text
 	width: 100%
-	
-.label
-	padding: 5px 10px 10px 10px
-	// background-color: $red
-.link-gold
-	background-image: linear-gradient(180deg, #FFF6D8 0%, #E5C796 100%)
-	color: transparent
-	background-clip: text
-	-webkit-background-clip: text
-	font-size: 20px
-	font-style: normal
-	font-weight: 700
-	display: block
-	&:hover
-		background-image: linear-gradient(180deg, #FFF6D8 0%, #F9C36B 100%)
-.gold
-	background-image: linear-gradient(180deg, #FFF6D8 0%, #E5C796 100%)
-	color: transparent
-	background-clip: text
-	-webkit-background-clip: text
-// .brown-bg-linear
-// 	background: linear-gradient(89deg, #8A4C07 0.93%, #C2671D 50.45%, #8A4C07 99.98%)
+
 .brown-text-linear
 	background: linear-gradient(180deg, #C56857 0%, #6C2B1F 100%)
 	color: transparent
 	background-clip: text
 	-webkit-background-clip: text
+.brown-bg-linear
+	background: linear-gradient(90deg, #8A4C07 -1.08%, #C2671D 48.71%, #8A4C07 98.5%)
 .gold-text-linear
-	background: linear-gradient(354deg, #F5BC00 22.16%, #FFE281 74.95%)
+	background: linear-gradient(360deg, #F5BC00 22.16%, #FFE281 74.95%)
 	color: transparent
 	background-clip: text
 	-webkit-background-clip: text
@@ -77,12 +178,13 @@ a.link-gold
 	background-image: url(../img/bg/v.png)
 	pointer-events: none
 h2
-	font-size: 92px
+	font-size: 74px
 	font-style: normal
 	font-weight: 700
 	line-height: 120%
 	letter-spacing: -0.861px
 	margin-bottom: 50px
+	text-transform: uppercase
 h3
 	font-size: 42px
 	font-style: normal
@@ -90,22 +192,37 @@ h3
 	line-height: 120%
 	letter-spacing: -1.84px
 	margin-bottom: 40px
+	text-transform: uppercase
 h4
-	font-size: 30px
+	font-size: 32px
 	font-style: normal
 	font-weight: 700
 	line-height: 120%
 	letter-spacing: -1.44px
 	margin-bottom: 15px
+	text-transform: uppercase
 h5
 	font-size: 24px
 	font-style: normal
 	font-weight: 700
 	line-height: 120%
-	letter-spacing: -1.84px
-	margin-bottom: 14px
+	letter-spacing: -0.48px
+	margin-bottom: 10px
+	text-transform: uppercase
+.par-24
+	font-size: 24px
+	font-style: normal
+	font-weight: 500
+	line-height: normal
+	letter-spacing: -0.4px
 .par-20
 	font-size: 20px
+	font-style: normal
+	font-weight: 400
+	line-height: normal
+	letter-spacing: -0.4px
+.par-18
+	font-size: 18px
 	font-style: normal
 	font-weight: 400
 	line-height: normal
@@ -117,7 +234,7 @@ h5
 	line-height: normal
 	letter-spacing: -0.4px
 .par-14
-	font-size: 16px
+	font-size: 14px
 	font-style: normal
 	font-weight: 400
 	line-height: normal
@@ -156,11 +273,18 @@ h5
 	left: 0px
 	position: absolute
 .prize
-	height: 100%
-	border-radius: 24px
-	border: 1px solid #046221
-	background: linear-gradient(180deg, #013D14 0%, #023010 100%)
-	box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.25)
+	border-radius: 16px
+	border: 1px solid #C76C15
+	background: linear-gradient(107deg, #582111 0.49%, #B16527 49.21%, #582111 100%)
+	box-shadow: 0px 4px 68px 0px #DF863A
+	padding-top: 150px
+	img
+		position: absolute
+		left: 0
+		right: 0
+		margin: 0 auto
+		top: -125px
+		max-width: 280px
 #prizes
 	background-image: url('../img/bg/prize-bg2.png')
 	background-size: 870px
@@ -175,7 +299,15 @@ h5
 	background-size: 100%
 	background-position: bottom center
 	background-repeat: no-repeat
+.main-prize-header
+	font-size: 60px
+	line-height: 120%
+	font-size: 60px
+	font-weight: 700
+	letter-spacing: -3.6px
+	text-transform: uppercase
 .main-prize
+	
 	img
 		width: 600px
 		margin: 0 auto
@@ -186,7 +318,7 @@ ul
 	list-style: none
 	padding: 0
 li.win-prize
-	
+
 	// padding-left: 15px
 	margin-bottom: 8px
 	margin-left: 20px
@@ -284,14 +416,14 @@ li.win-prize
 	background: none
 	font-size: 20px
 	opacity: 0.6
-	color: $white
+	color: $brown
 	line-height: 120%
 	&.active
-		background-color: #02521C
-		color: $white
+		background-color: $white
+		color: $brown
 		opacity: 1
 	&:hover
-		background-color: #02521C
+		background-color: $white
 		opacity: 0.8
 .winners-search__btn
 	position: absolute
@@ -313,10 +445,10 @@ input#search
 	width: 100%
 	border-radius: 55px
 	border: none
-	background: none
+	background-color: #DBA800
 	border-radius: 32px
 	padding: 0 0 0 60px
-	outline: 1px solid #FFF6D8
+	font-weight: 600
 	font-size: 16px
 	color: #FFF6D8
 	line-height: 100%
@@ -329,16 +461,17 @@ input#search
 		color: #FFF6D8
 .winners-search
 	position: relative
-#winners_wrapper
+#tableWinners_wrapper
 	border-radius: 0px 0px 32px 32px
-	background: #02521C
+	background: #FFFFFF
+	// box-shadow: 0px 4px 44px 0px rgba(0, 0, 0, 0.25)
 	padding: 40px
 .dataTables_filter
 	display: none
 
 th
 	padding: 20px 0px 20px 40px
-	color: #689978
+	color: $white
 	font-size: 20px
 	font-weight: 600
 	line-height: 120%
@@ -363,9 +496,6 @@ thead
 .th-phone
 	width: 335px!important
 
-#winner
-	width: 100%
-	background: linear-gradient(180deg, #013D14 0%, #023010 100%)
 a.page-link
 	display: flex
 	width: 48px
@@ -373,7 +503,7 @@ a.page-link
 	justify-content: center
 	align-items: center
 	border-radius: 48px!important
-	background: #04581F!important
+	background: #C37430!important
 	color: #FFF6D8!important
 	border: none
 	font-size: 20px
@@ -382,8 +512,14 @@ a.page-link
 		// background-color: $green!important
 .page-item.active .page-link
 	// color: $green!important
-	background-color: #FFF6D8!important
-
+	background-color: $brown !important
+#tableWinners_wrapper
+	a.page-link
+		background-color: $cream	!important
+		color: $brown !important
+	.page-item.active .page-link
+		background-color: $brown!important
+		color: $white!important
 ul.pagination
 	display: flex
 	gap: 14px
@@ -393,14 +529,14 @@ ul.pagination
 	background: linear-gradient(180deg, #D99B53 0%, #F9F1A1 63.02%, #B68F56 95.83%)
 	padding: 40px
 	h3
-		color:#3E3629
+		color: #3E3629
 .list-group-item
 	position: relative
 	padding: 0 0 0 70px
 	margin-bottom: 20px
 
 	&::before
-		width:44px
+		width: 44px
 		height: 44px
 		color: #000
 		font-size: 20px
@@ -427,13 +563,13 @@ ul.pagination
 .chat-bot-bg
 	background-image: url('../img/bg/chat-bot-bg.png')
 	background-size: 1440px
-	background-repeat: no-repeat	
+	background-repeat: no-repeat
 	background-position: bottom center
 .list-group-item
 	a
 		color: #001005
 		text-decoration: none
-.tooltip-inner 
+.tooltip-inner
 	max-width: 350px
 	width: 350px
 
@@ -441,8 +577,83 @@ ul.pagination
 	font-family: Arial, Helvetica, sans-serif
 	font-weight: 500
 
+@media screen and (max-width: 1360px)
+	.swiper-products-next
+
+		right: 10px
+	.swiper-products-prev
+
+		left: 10px
 
 @media screen and (max-width: 1100px)
+	.prize
+		border-radius: 16px
+		border: 1px solid #C76C15
+		background: linear-gradient(107deg, #582111 0.49%, #B16527 49.21%, #582111 100%)
+		box-shadow: 0px 4px 68px 0px #DF863A
+		padding: 180px 16px 10px 16px
+		img
+			position: absolute
+			left: 0
+			right: 0
+			margin: 0 auto
+			top: -70px
+			max-width: 280px
+
+	.img-rigth
+		width: 635px
+		top: 320px
+		position: absolute
+		margin-left: auto
+		margin-right: auto
+		left: 0
+		right: 0
+		transform: translate(830px) rotate(90deg)
+		text-align: center
+		opacity: 0
+	.img-left-anim
+		top: 40vw!important
+		width: 40%
+		transform: translate(-40vw) rotate(0deg)!important
+		opacity: 1!important
+		transition-duration: .7s
+		transition-timing-function: cubic-bezier(0.2, 1.01, 0.38, 1)
+	#img-rigth
+		width: 40%
+		top: 520px
+		position: absolute
+		margin-left: auto
+		margin-right: auto
+		left: 0
+		right: 0
+		transform: translate(500px) rotate(90deg)
+		text-align: center
+		opacity: 0
+	.img-rigth-anim
+		top: 40vw!important
+		transform: translate(40vw) rotate(0deg)!important
+		opacity: 1!important
+		transition-duration: .7s
+		width: 40%
+		transition-timing-function: cubic-bezier(0.2, 1.01, 0.38, 1)
+	.main-banner-top-wrapper
+		width: 55%
+		height: 13vw
+		position: relative
+		img
+			width: 100%
+			position: absolute
+			top: -300px
+	.main-banner-bottom-wrapper
+		width: 70%
+		height: 17vw
+		position: relative
+		img
+			width: 100%
+			position: absolute
+			top: 300px
+	.touch-center
+		margin: 0 auto
 	#prizes
 		background-image: url('../img/bg/prize-bg2.png')
 		background-size: 870px
@@ -481,12 +692,12 @@ ul.pagination
 	.table-btn
 		padding: 20px 0
 		border-radius: 16px
-	#winners_wrapper
+	#tableWinners_wrapper
 		border-radius: 16px
 	.chat-bot-bg
 		background-image: url('../img/bg/chat-bot-bg.png')
 		background-size: 100%
-		background-repeat: no-repeat	
+		background-repeat: no-repeat
 		background-position: bottom center
 	.list-group-numbered
 		padding: 0
@@ -509,8 +720,51 @@ ul.pagination
 		top: 0
 		z-index: -1
 
-
 @media screen and (max-width: 768px)
+	
+	.winners-icon
+		width: 60px
+		height: 60px
+	.swiper-products-next
+		width: 8px
+		height: 17px
+	.swiper-products-prev
+		width: 8px
+		height: 17px
+	#img-rigth
+		width: 60%
+		top: 520px
+		position: absolute
+		margin-left: auto
+		margin-right: auto
+		left: 0
+		right: 0
+		transform: translate(500px) rotate(90deg)
+		text-align: center
+		opacity: 0
+	.img-rigth-anim
+		top: 80vw!important
+		transform: translate(50vw) rotate(0deg)!important
+		opacity: 1!important
+		transition-duration: .7s
+		width: 300px
+		transition-timing-function: cubic-bezier(0.2, 1.01, 0.38, 1)
+	.main-banner-top-wrapper
+		width: 100%
+		height: 20vw
+		position: relative
+		img
+			width: 100%
+			position: absolute
+			top: -300px
+	.main-banner-bottom-wrapper
+		width: 100%
+		height: 25vw
+		position: relative
+		img
+			width: 100%
+			position: absolute
+			top: 300px
 	h2
 		font-size: 62px
 	.how-do__item
@@ -528,37 +782,38 @@ ul.pagination
 			margin: 0 auto
 			display: block
 			padding-bottom: 5vw
-	.touch-center
-		margin: 0 auto
-	#winners_wrapper
+
+	#tableWinners_wrapper
 		border-radius: 16px
 		overflow-x: scroll
 		padding: 25px
-	#winners
+	#tableWinners
 		width: 100%
 		min-width: 600px
 	th
 		padding: 20px 0px 20px 20px
 
-
 	td
 		padding: 19px 0px 16px 20px
-	
+
 	.table-btn
 		padding: 14px 0 18px 0
 		border-radius: 16px
 	.chat-bot
 		padding: 30px
 @media screen and (max-width: 575px)
+
+	.rules-icon
+		width: 56px
+
 	h2
-		font-size: 42px
-		margin-bottom: 24px
+		font-size: 36px
+		margin-bottom: 30px
 	h3
 		font-size: 30px
 		margin-bottom: 12px
 	h4
 		font-size: 24px
-
 
 	.how-do__item
 		padding: 0
@@ -590,14 +845,12 @@ ul.pagination
 			padding-bottom: 6vw
 	th
 		padding: 20px 0px 20px 00px
-		color: #689978
 		font-size: 16px
 
 	td
 		padding: 19px 0px 16px 00px
 		font-size: 16px
 		line-height: 120%
-		color: $white
 		font-weight: 600
 	.table-btn
 		font-size: 16px
@@ -614,7 +867,7 @@ ul.pagination
 		margin-bottom: 20px
 
 		&::before
-			width:36px
+			width: 36px
 			height: 36px
 			color: #000
 			font-size: 20px

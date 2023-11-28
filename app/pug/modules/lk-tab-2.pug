@@ -1,66 +1,55 @@
-.row 
+.row.mt-40.mt-md-0   
     .col-12 
-        .lk-tab-title.text-center Мои заявки
+        .lk-tab-title.text-center
+            span.gold-text-linear Как участвовать в&nbsp;конкурсе
+.row.position-relative 
+    +img("/icons/arrow-photo.svg",'Сертификат','arrow-photo')
+    .col-sm-6.col-lg-4.px-lg-40.text-center
+        +img("photo-step-1.png",'Сертификат','img-fluid photo-step','')
+        h4.mt-15.mt-md-30 
+            div.gold-text-linear Опубликуйте пост 
+        .par-20.c-white пост с&nbsp;приятным моментом и&nbsp;Творобушками на&nbsp;своей странице в&nbsp;VK
+    .col-sm-6.col-lg-4.px-lg-40.mt-40.mt-sm-0.text-center
+        +img("photo-step-2.png",'Сертификат','img-fluid photo-step','')
+        h4.mt-15.mt-md-30 
+            div.gold-text-linear Добавьте хэштег
+        .par-20.c-white #творобушки в пост  
+    .col-sm-6.col-lg-4.px-lg-40.mt-40.mt-lg-0.text-center.touch-center
+        +img("photo-step-3.png",'Сертификат','img-fluid photo-step','') 
+        h4.mt-15.mt-md-30 
+            div.gold-text-linear Отправьте ссылку
+        .par-20.c-white на пост в специальное поле расположенное ниже  
+form.row.needs-validation(novalidate).mt-40.mt-md-70.photo-contest 
+    .col  
+        input(type="text" placeholder="Вставьте ссылку вашего поста" required).form-control.form-photo-contest 
+        .invalid-feedback Вы не вставили ссылку
+        button.btn-lk.btn-photo-contest.btn-red(type="submit")  Отравить на модерацию
+
 .row 
+    .col-12.mt-15.mt-40.mt-md-60 
+        h3.text-center
+            span.gold-text-linear Зарегистрированные посты
     .col-12 
         .receved-code-table__wrapper
             table#appl.receved-code-table
                 thead
                     tr
-                        th.nowrap.date-appl Дата и время 
-                        th.nowrap.num-appl <span class="font-arial"> №</span> заявки
-                        th.nowrap.date-event Вид розыгрыша
-                        th.nowrap.type-event Дата розыгрыша
-                        th.status-event Статус
+                        th.nowrap.date-appl Дата розыгрыша
+                        th.nowrap.num-appl Ссылка
+                        th.nowrap.date-event Статус
                 tbody
                     tr
                         td 14.12.2023, 23:00
-                        td 1340006
-                        td Еженедельный
-                        td 14.12.2023
+                        td https://vk.com/al_feed.php?w=wall-174163010_727524
                         td
-                            .status.status_wait Ожидает розыгрыша
+                            .status.status_wait На проверке
                     tr
                         td 14.12.2023, 23:00
-                        td 1340006
-                        td Еженедельный
-                        td 14.12.2023
+                        td https://vk.com/al_feed.php?w=wall-174163010_727524
                         td
-                            .status.status_wait Участвует сегодня
+                            .status.status_canceled Не прошла проверку
                     tr
                         td 14.12.2023, 23:00
-                        td 1340006
-                        td Еженедельный
-                        td 14.12.2023
+                        td https://vk.com/al_feed.php?w=wall-174163010_727524
                         td
-                            .status.status_canceled Не выиграла
-                    tr
-                        td 14.12.2023, 23:00
-                        td 1340006
-                        td Еженедельный
-                        td 14.12.2023
-                        td
-                            .status.status_success Выигрыш
-                    tr
-                        td 14.12.2023, 23:00
-                        td 1340006
-                        td Еженедельный
-                        td 14.12.2023
-                        td
-                            .status.status_wait Ожидает розыгрыша
-                    tr
-                        td 14.12.2023, 23:00
-                        td 1340006
-                        td Еженедельный
-                        td 14.12.2023
-                        td
-                            .status.status_wait Ожидает розыгрыша
-                    tr
-                        td 14.12.2023, 23:00
-                        td 1340006
-                        td Еженедельный
-                        td 14.12.2023
-                        td
-                            .status.status_wait Ожидает розыгрыша
-
-
+                            .status.status_success Не прошла проверку

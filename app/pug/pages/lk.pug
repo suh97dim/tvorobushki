@@ -10,30 +10,35 @@ block content
     .container 
         .row
             .col 
-                h2.text-center.brown-text-linear Личный кабинет
+                h2.text-center
+                    div.brown-text-linear Личный кабинет
 
         ul.nav.nav-lk.row 
-            li.nav-lk-item.col-6.col-lg-3
-                a(href='#tab-1' data-bs-toggle="tab").nav-lk-link.active Мои чеки
-            li.nav-lk-item.col-6.col-lg-3
-                a(href='#tab-2' data-bs-toggle="tab").nav-lk-link   Мои заявки
-            li.nav-lk-item.col-6.col-lg-3.mt-24.mt-lg-0
-                a(href='#tab-3' data-bs-toggle="tab").nav-lk-link Мои призы
-            li.nav-lk-item.col-6.col-lg-3.mt-24.mt-lg-0 
-                a(href='#tab-4' data-bs-toggle="tab").nav-lk-link  Персональные данные
+            li.nav-lk-item.col-4.col-sm.px-12
+                a(href='#tab-1' data-bs-toggle="tab").nav-lk-link.active Чеки
+            li.nav-lk-item.col-4.col-sm.px-0.px-sm-12
+                a(href='#tab-2' data-bs-toggle="tab").nav-lk-link Фотоконкурс
+            li.nav-lk-item.col-4.col-sm.px-12
+                a(href='#tab-3' data-bs-toggle="tab").nav-lk-link Заявки   
+            li.nav-lk-item.col-4.col-sm.px-12.mt-12.mt-sm-0
+                a(href='#tab-4' data-bs-toggle="tab").nav-lk-link Призы
+            li.nav-lk-item.col-4.col-sm.px-0.mt-12.px-sm-12.mt-sm-0
+                a(href='#tab-5' data-bs-toggle="tab").nav-lk-link Данные
         .row
             .tab-content
-                    #tab-1.tab-pane.fade.lk-content.active.show
-                        include /modules/lk-tab-1
-                    #tab-2.tab-pane.fade.lk-content
-                        include /modules/lk-tab-2
-                    #tab-3.tab-pane.fade.lk-content
-                        include /modules/lk-tab-3
-                    #tab-4.tab-pane.fade.lk-content
-                        include /modules/lk-tab-4
-                    
+                #tab-1.tab-pane.fade.lk-content.active.show
+                    include /modules/lk-tab-1
+                #tab-2.tab-pane.fade.lk-content
+                    include /modules/lk-tab-2
+                #tab-3.tab-pane.fade.lk-content
+                    include /modules/lk-tab-3
+                #tab-4.tab-pane.fade.lk-content
+                    include /modules/lk-tab-4
+                #tab-5.tab-pane.fade.lk-content
+                    include /modules/lk-tab-5
 
-                                
+
+
 
 
 

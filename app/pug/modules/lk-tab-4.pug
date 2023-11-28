@@ -1,140 +1,72 @@
+.row.mt-40.mt-md-0 
+    .col-12 
+        .lk-tab-title.text-center
+            span.gold-text-linear Призы
+        h3.text-center
+            span.gold-text-linear Вы еще не выиграли призов
 .row 
-    .col 
-        .lk-tab-title.text-center Персональные данные
-.row 
-    .col 
-        .lk-form 
-            form.row.needs-validation(novalidate)
-                .col-sm-6.mb-24
-                    input(type="text" placeholder="Фамилия" disabled readonly required value="Иванов").form-control 
-                    .invalid-feedback Введите фамилию
-                .col-sm-6.mb-24
-                    input(type="text" placeholder="Имя" disabled readonly  required value="Дмитрий").form-control
-                    .invalid-feedback Введите имя
-                .col-sm-6.mb-24
-                    input(type="text" placeholder="Отчество" disabled readonly required value="Алексеевич").form-control
-                    .invalid-feedback Введите отчество
-                .col-sm-6.mb-xl-25
-                    .form-control-wrap.mb-22.radio-wrap
-                        .text-label Пол:
-                        label(for="male").radio-label
-                            input(type="radio" value="Муж" disabled readonly checked name="gender" id="male").radio-input 
-                            | Муж.
-                        label(for="female").radio-label
-                            input(type="radio" value="Жен" disabled readonly name="gender" id="female" ).radio-input
-                            | Жен.
-                .col-sm-6.mb-24
-                    input(type="text" placeholder="Дата рождения" disabled readonly data-toggle="datepicker" required value="08.22.2023").form-control
-                    .invalid-feedback Введите дату рождения
-                .col-sm-6.mb-24
-                    input(type="text" placeholder="Город проживания" disabled readonly required value="Москва").form-control
-                    .invalid-feedback Введите город проживания
-                .col-sm-6.mb-24
-                    input( placeholder="Номер телефона" disabled readonly required value="88805553535").form-control.mask-phone
-                    .invalid-feedback Введите номер телефона
-                .col-sm-6.mb-24
-                    input(type="email" placeholder="E-mail" disabled readonly required value="user@mail.ru").form-control
-                    .invalid-feedback Введите E-mail
-                .col-sm-6.mb-24
-                    button.btn-lk.btn-red.w-100.px-0(type="submit") 
-                        span.gold Сохранить данные
-.row 
-    .col
-        .lk-tab-title.text-center Персональные данные
-        .lk-attention
-            +img("icons/attention.svg" )
-            .par-16 Персональные данные требуются в соответствии законом для уплаты налогов при получении призов на общую <strong> сумму свыше 4000 рублей</strong>. Налог оплачивает Организатор. Если общая сумма призов составляет меньше 4000 рублей — добавлять персональные данные не обязательно. Для получения призов на сумму более 4000 рублей предоставление персональных данных является обязательным. 
-.row.mt-60 
-    .col
-        .lk-form
-            h3.gold Регистрационные данные:
-            form.row.needs-validation(novalidate)
-                .col-sm-6.mb-24
-                    input(type="text" placeholder="Фамилия" required ).form-control
-                    .invalid-feedback Введите фамилию
-                .col-sm-6.mb-24
-                    input(type="text" placeholder="Имя" required ).form-control
-                    .invalid-feedback Введите имя
-                .col-sm-6.mb-24
-                    input(type="text" placeholder="Отчество" required ).form-control
-                    .invalid-feedback Введите отчество
-                .col-sm-6.mb-xl-25
-                    .form-control-wrap.mb-22.radio-wrap
-                        .text-label Пол:
-                        label(for="male").radio-label
-                            input(type="radio" value="Муж" checked name="gender" id="male").radio-input 
-                            | Муж.
-                        label(for="female").radio-label
-                            input(type="radio" value="Жен" name="gender" id="female" ).radio-input
-                            | Жен.
-                .col-sm-6.mb-24
-                    input(type="text" placeholder="Дата рождения" data-toggle="datepicker" required ).form-control
-                    .invalid-feedback Введите дату рождения
-                .col-sm-6.mb-24
-                    input(type="text" placeholder="Город проживания" required ).form-control
-                    .invalid-feedback Введите город проживания
-                .col-sm-6.mb-24
-                    input( placeholder="Номер телефона" required ).form-control.mask-phone
-                    .invalid-feedback Введите номер телефона
-                .col-sm-6.mb-24
-                    input(type="email" placeholder="E-mail" required ).form-control
-                    .invalid-feedback Введите E-mail
-                .col-sm-6.mb-24
-                    button.btn-lk.btn-red.w-100.px-0(type="submit") 
-                        span.gold Сохранить данные
-.row.mt-40 
-    .col
-        .lk-form
-            h3.gold Данные для уплаты налогов:
-            h4.c-white Первая страница паспорта
-            form.row.needs-validation(novalidate)
-                .col-sm-4.mb-24
-                    input(type="number" placeholder="Серия" required ).form-control
-                    .invalid-feedback Введите cерию
-                .col-sm-4.mb-24
-                    input(type="number" placeholder="Номер" required ).form-control
-                    .invalid-feedback Введите номер
-                .col-sm-4.mb-24
-                    input(type="text" placeholder="Дата выдачи" data-toggle="datepicker" required).form-control
-                    .invalid-feedback Введите дату выдачи
-                .col-sm-12.mb-32
-                    input(type="text" placeholder="Кем выдан" required ).form-control
-                    .invalid-feedback Кто выдал паспорт?
-
-                h4.c-white Адрес прописки
-                .col-sm-6.mb-24
-                    input(type="text" placeholder="Населенный пункт" required ).form-control
-                    .invalid-feedback Введите населенный пункт
-                .col-sm-6.mb-24
-                    input(type="text" placeholder="Улица" required ).form-control
-                    .invalid-feedback Введите улицу
-                .col-sm-4.mb-24
-                    input(type="number" placeholder="Номер " required ).form-control
-                    .invalid-feedback Введите номер дома
-                .col-sm-4.mb-24
-                    input(type="number" placeholder="Номер строения" required ).form-control
-                    .invalid-feedback Введите номер строения
-                .col-sm-4.mb-24
-                    input(type="number" placeholder="Номер квартиры" required ).form-control
-                    .invalid-feedback Введите номер квартиры
-                .col-sm-6.mb-24
-                    .upload-one
-                        <input invalid-custom="file-1" class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
-                        .file-subtitle Фото паспорта лицевая сторона
-                        .invalid-feedback(invalid-customs="file-1") Загрузите фото
-                .col-sm-6.mb-24
-                    .upload-one
-                        <input invalid-custom="file-2" class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
-                        .file-subtitle Фото паспорта, прописка
-                        .invalid-feedback(invalid-customs="file-2") Загрузите фото
-                .col-sm-6.mb-24
-                    input(type="number" placeholder="ИНН" required).form-control
-                    .invalid-feedback Введите ИНН
-                .col-sm-6.mb-24
-                    .upload-one
-                        <input invalid-custom="file-3"  class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
-                        .invalid-feedback(invalid-customs="file-3") Загрузите фото
-                .col-sm-6.mb-24
-                    button.btn-lk.btn-red.w-100.px-0#nalog(type="submit") 
-                        span.gold Сохранить данные
-
+    .col-12
+        .lk-prize
+            +img("lk-prizes/lk-prize-1.png",'Сертификат')
+            .lk-prize-desc
+                h5.c-cream Гарантированный приз 50 рублей на счет телефона
+                .par-14.c-cream Перечисление происходит автоматически на номер мобильного, указанный при регистрации.
+            a.to-data-tab.btn-lk-prize( type="button" href="" )  Заполнить данные
+    .col-12.mt-15.mt-md-60
+        .lk-prize
+            +img("lk-prizes/lk-prize-2.png",'Сертификат')
+            .lk-prize-desc
+                h5.c-cream 5000 баллов на карту X5 Клуба
+                .par-14.c-cream Дата розыгрыша: 14.12.2023 
+            a.to-data-tab.btn-lk-prize( type="button" href="" )  Заполнить данные
+    .col-12.mt-15.mt-40.mt-md-60 
+        h3.text-center
+            span.gold-text-linear Специальные призы
+    .col-12
+        .lk-prize
+            +img("lk-prizes/lk-prize-3.png",'Сертификат')
+            .lk-prize-desc
+                h5.c-cream Умный электрогриль <br> Tefal Optigrill+ XL GC722D34
+                .par-14.c-cream Дата розыгрыша: 14.12.2023 
+            a.to-data-tab.btn-lk-prize( type="button" href="" )  Заполнить данные
+    .col-12.mt-15.mt-md-60
+        .lk-prize
+            +img("lk-prizes/lk-prize-4.png",'Сертификат')
+            .lk-prize-desc
+                h5.c-cream Мультиварка Redmond RMC-IHM301
+                .par-14.c-cream Дата розыгрыша: 14.12.2023 
+            a.to-data-tab.btn-lk-prize( type="button" href="" )  Заполнить данные
+    .col-12.mt-15.mt-md-60
+        .lk-prize
+            +img("lk-prizes/lk-prize-5.png",'Сертификат')
+            .lk-prize-desc
+                h5.c-cream Робот-пылесос <br> Xiaomi Mi Robot Vacuum-Mop 2
+                .par-14.c-cream Дата розыгрыша: 14.12.2023 
+            a.to-data-tab.btn-lk-prize( type="button" href="" )  Заполнить данные
+    .col-12.mt-15.mt-md-60
+        .lk-prize
+            +img("lk-prizes/lk-prize-6.png",'Сертификат')
+            .lk-prize-desc(style="max-width:430px")
+                h5.c-cream Еженедельный приз за фотоконкурс в VK - Фотоаппарат мгновенной печати Polaroid
+                .par-14.c-cream Дата розыгрыша: 14.12.2023 
+            a.to-data-tab.btn-lk-prize( type="button" href="" )  Заполнить данные
+    .col-12.mt-15.mt-40.mt-md-60 
+        h3.text-center
+            span.gold-text-linear Главный приз
+    .col-12
+        .main-prize-lk
+            +img("lk-prizes/lk-main-prize.png",'Сертификат')
+            span
+                .main-prize-title.c-cream.mb-0 Сертификат на путешествие всей семьей номиналом
+                .main-prize-nominal
+                    div.gold-text-linear 200&nbsp;000&nbsp;Р
+    .col-12.mt-15.mt-40.mt-md-60 
+        h3.text-center
+            div.gold-text-linear Еженедельный приз за&nbsp;фотоконкурс в&nbsp;VK
+    .col-12
+        .lk-prize
+            +img("lk-prizes/lk-prize-6.png",'Сертификат')
+            .lk-prize-desc
+                h5.c-cream Фотоаппарат мгновенной печати Polaroid
+                .par-14.c-cream Дата розыгрыша: 14.12.2023 
+            a.to-data-tab.btn-lk-prize( type="button" href="" )  Заполнить данные

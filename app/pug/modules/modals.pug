@@ -4,7 +4,8 @@
             .modal-body
                 button(type="button" data-bs-dismiss="modal" aria-label="Close").close
                     +img('icons/close.svg', 'close-ic')
-                .modal-title Вход
+                .modal-title
+                    span.gold-text-linear Вход
                 form.row.needs-validation(novalidate)
                     .col-12.mb-24
                         input( placeholder="Номер телефона" required ).form-control.mask-phone
@@ -14,13 +15,12 @@
                         .invalid-feedback Введите пароль
                         a(href="#modal-recovery").js-change-modal.modal-link.text-end.w-100 Забыли пароль? 
                     .col-12.mb-24
-                        button.btn-lk.btn-red.w-100.px-0(type="submit") 
-                            span.gold Войти в кабинет
+                        button.btn-lk.btn-red.w-100.px-0(type="submit")  Войти в кабинет
                 .row
                     .col-12 
-                        .par-16.text-center.c-green-middle Если Вы впервые на сайте, то Вам необходимо 
+                        .par-16.text-center.c-white.opacity-50 Если Вы впервые на сайте, то Вам необходимо 
                     a(href="#modal-reg").js-change-modal.modal-link-lg.text-center
-                        span.gold Зарегистрироваться
+                        span.gold-text-linear Зарегистрироваться
 
 //- /.modal
 
@@ -30,7 +30,8 @@
             .modal-body
                 button(type="button" data-bs-dismiss="modal" aria-label="Close").close
                     +img('icons/close.svg', 'close-ic')
-                .modal-title.modal-title-reg Регистрация
+                .modal-title
+                    span.gold-text-linear Регистрация
                 form.row.needs-validation(novalidate)
                     .col-sm-6.mb-24
                         input(type="text" placeholder="Фамилия" required ).form-control
@@ -55,7 +56,7 @@
                         .invalid-feedback Введите дату рождения
                     .col-sm-6.mb-24
                         input(type="text" placeholder="Город проживания" required ).form-control
-                        .invalid-feedback Введите дату город проживания
+                        .invalid-feedback Введите проживания
                     .col-sm-6.mb-24
                         input( placeholder="Номер телефона" required ).form-control.mask-phone
                         .invalid-feedback Введите номер телефона
@@ -65,29 +66,27 @@
                     .col-sm-12.mb-6
                         label.checkbox
                             input(type="checkbox" required).radio-input.mr-10
-                            span.checkbox__text Ознакомлен и согласен <a href="#" class="label-text">пользовательским соглашением </a> и <a href="#" class="label-text">политикой конфиденциальности</a>
+                            span.checkbox__text Ознакомлен и согласен <a href="upload/" class="label-text">пользовательским соглашением </a> и <a href="upload/" class="label-text">политикой конфиденциальности</a>
                             .invalid-feedback Подтвердите согласие с пользовательским соглашением и политикой конфиденциальности
                     .col-sm-12.mb-6
                         label.checkbox
                             input(type="checkbox" required).radio-input.mr-10
-                            span.checkbox__text Ознакомлен и согласен с <a href="#" class="label-text">правилами акции </a> 
+                            span.checkbox__text Ознакомлен и согласен с <a href="upload/" class="label-text">правилами акции </a> 
                             .invalid-feedback Подтвердите согласие с правилами акции
                     .col-sm-12.mb-6
                         label.checkbox
                             input(type="checkbox" required).radio-input.mr-10
-                            span.checkbox__text Даю свое согласие на обработку <a href="#" class="label-text">персональных данных </a> 
+                            span.checkbox__text Даю свое согласие на обработку <a href="upload/" class="label-text">персональных данных </a> 
                             .invalid-feedback Подтвердите согласие на обработку персональных данных
                     .col-sm-12.mb-6
                         label.checkbox
                             input(type="checkbox" required).radio-input.mr-10
                             span.checkbox__text.c-white Мне уже есть 18 лет 
                             .invalid-feedback Подтвердите возраст
-                    .col-12.col-sm-6.mt-24
+                    .col-12.mt-24
                         button.btn-lk.btn-red.w-100.px-0(type="submit") 
-                            span.gold Войти в кабинет
-                    .col-12.col-sm-6
-                        a(href="#modal-enter").js-change-modal.modal-link-lg.text-center.text-sm-start.mt-16.mt-sm-32
-                            span.gold Войти
+                            span.gold Зарегистрироваться
+
 
 .modal#modal-recovery
     .modal-dialog.modal-dialog-centered
@@ -95,7 +94,8 @@
             .modal-body
                 button(type="button" data-bs-dismiss="modal" aria-label="Close").close
                     +img('icons/close.svg', 'close-ic')
-                .modal-title-sm Восстановление пароля
+                .modal-title-sm
+                    span.gold-text-linear Восстановление пароля
                 form.row.needs-validation(novalidate)
                     .col-12.mb-24
                         input( placeholder="Номер телефона" required ).form-control.mask-phone
@@ -105,8 +105,8 @@
                             span.gold Восстановить пароль
                 .row
                     .col-12 
-                    a(href="#modal-reg").js-change-modal.modal-link-lg.text-center
-                        span.gold Войти в кабинет
+                    a(href="#modal-enter").js-change-modal.modal-link-lg.text-center
+                        span.gold-text-linear Войти в кабинет
 
 .modal#modal-success-reg
     .modal-dialog.modal-dialog-centered
@@ -115,10 +115,10 @@
                 button(type="button" data-bs-dismiss="modal" aria-label="Close").close
                     +img('icons/close.svg', 'close-ic')
                 h4.text-center
-                    span.gold Вы зарегистрировались <br> в акции!
+                    span.gold-text-linear Вы зарегистрировались <br> в акции!
                 .row.mt-12
                     .col-12 
-                        .par-16.text-center.c-green-middle.fw-bolder На указанный вами телефон (79008987676) отправлен пароль для доступа в личный кабинет
+                        .par-16.text-center.c-white На указанный вами телефон (79008987676) отправлен пароль для доступа в личный кабинет
                 .row.mt-24
                     .col-12 
                         button.btn-lk.btn-red.w-100.px-0(href="#modal-enter" type="button").js-change-modal.modal-link-lg.text-center
@@ -130,10 +130,26 @@
             .modal-body
                 button(type="button" data-bs-dismiss="modal" aria-label="Close").close
                     +img('icons/close.svg', 'close-ic')
-                .modal-title Спасибо!
+                .modal-title 
+                    span.gold-text-linear Спасибо!
                 .row.mt-12
                     .col-12 
-                        .par-16.text-center.c-green-middle.fw-bolder На указанный номер телефона отправлен новый пароль
+                        .par-16.text-center.c-white На указанный номер телефона отправлен новый пароль
+                .row.mt-24
+                    .col-12 
+                        button.btn-lk.btn-red.w-100.px-0(href="#modal-enter" type="button").js-change-modal.modal-link-lg.text-center
+                            span.gold Войти в кабинет
+.modal#modal-error
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                .modal-title 
+                    span.gold-text-linear Ошибка!
+                .row.mt-12
+                    .col-12 
+                        .par-16.text-center.c-white Для доступа к данной странице вы должны быть авторизованы!
                 .row.mt-24
                     .col-12 
                         button.btn-lk.btn-red.w-100.px-0(href="#modal-enter" type="button").js-change-modal.modal-link-lg.text-center
@@ -146,6 +162,5 @@
                 button(type="button" data-bs-dismiss="modal" aria-label="Close").close
                     +img('icons/close.svg', 'close-ic')
                 h4.text-center
-                    span.gold Фискальные знаки на чеке
+                    span.gold-text-linear Фискальные знаки на чеке
                     +img("fiskal.jpg",'','img-fluid mt-24').
-                

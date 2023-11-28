@@ -72,7 +72,7 @@ textarea
     height: 20px
     border: none
     border-radius: 10px
-    border: 1px solid #044A1A
+    border: 1px solid #8D4E09
     margin-right: 8px
     background: $white
     min-width: 20px
@@ -99,7 +99,7 @@ textarea
     justify-content: center
     align-items: center
 .text-label
-    color: #819587
+    color: $white
     font-size: 16px
     font-weight: 600
     line-height: 130%
@@ -115,12 +115,13 @@ label
     font-weight: 600
     line-height: 130%
     letter-spacing: -0.32px
-    color: #5FB179
+    color: #E58F47
 .label-text
     text-decoration: none
     color: $white
     &:hover
         opacity: 0.8
+        color: #fff
 label.checkbox
     max-width: 100%
     flex-wrap: wrap
@@ -188,12 +189,12 @@ input[type="checkbox"]:checked + label
     padding: 15px 23px 16px
     border-radius: 16px
     font-weight: 600
-    border: 2px solid $white
+    color:#988986
+    outline: 1px solid #8D4E09
     background: $white
     width: 100%
     &:focus
-        border: 2px solid #C29D45
-        outline: none
+        outline: 2px solid #C29D45
         box-shadow: none
         &::-webkit-input-placeholder
             color: transparent
@@ -203,7 +204,8 @@ input[type="checkbox"]:checked + label
             color: transparent
         &:-ms-input-placeholder
             color: transparent
-
+.form-photo-contest
+    border-radius: 4px
 .form-control_confirm
     width: 58px
     text-align: center
@@ -309,7 +311,7 @@ label.checkbox
         width: 25px
         height: 25px
         border: 0 !important
-        background: #ffc400 url(../img/icons/delete-file.svg) no-repeat center / 25px 25px !important
+        background:  url(../img/icons/delete-file.svg) no-repeat center / 25px 25px !important
         padding: 0 !important
 
         cursor: pointer
@@ -328,24 +330,26 @@ label.checkbox
             background: #FFF6D8 url('../img/icons/icon_upload_small.svg') no-repeat center / 238px auto
             background-size: 147px auto
     .file-error-message
-        color: red
+        color: #ff7c7f
     .kv-file-rotate
         display: none
     .file-preview-status
         display: none
 
 .upload-one
+    .form-control
+        outline: none
 
     .file-input
         border-radius: 10px
         border-radius: 10px
         padding: 1px
-        border: 2px dashed #5FB179
+        border: 2px dashed #E58F47
         background-repeat: no-repeat
         &:focus,
         &:hover
-            border-color: #5FB179
-            background-color: #5FB179
+            border-color: #E58F47
+            background-color: #E58F47
         &:not(.file-input-new)
             .file-caption
                 padding-right: 0

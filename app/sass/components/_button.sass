@@ -9,7 +9,7 @@
 .btn
     padding: 17px 60px 20px 60px
     text-align: center
-    border-radius: 80px
+    border-radius: 4px
     font-size: 24px
     display: block
     font-weight: 700
@@ -20,41 +20,62 @@
     display: flex
     justify-content: center
     align-items: center
-    border-radius: 30px
+    border-radius: 60px
     background-color: rgba(255, 255, 255, 0.20)
     box-shadow: 0px 4px 92px 0px #FFE19F
     text-decoration: none
     color: $brown
     font-size: 18px
     font-weight: 600
+    img
+        margin-right: 10px
     &:hover
         color: #fff
         background-color: $brown
 
 .btn-sm
-    padding: 8px 29px 13px 29px
-    color: #4A381D
-    font-size: 16px
-    border-radius: 32px
+    padding: 14px 10px 17px 10px
+    font-size: 18px
+    border: none
+    border-radius: 4px
+    width: 300px
     text-decoration: none
     font-weight: 600
     display: block
     letter-spacing: -0.32px
 .btn-lk
     padding: 10px 29px 15px 29px
-    color: #4A381D
-    font-size: 20px
-    border-radius: 32px
+    color: $white
+    font-size: 18px
+    border-radius: 4px
     text-decoration: none
-    border: none
-    font-weight: 700
+    border: 1px solid #FC3944
+    font-weight: 600
     display: block
     letter-spacing: -0.32px
-.btn-red
-    background: linear-gradient(180deg, #BB1015 0%, #E31E24 100%)
+.btn-lk-prize
+    padding: 10px 20px 12px 20px
+    color: $white
+    font-size: 16px
+    border-radius: 4px
+    text-decoration: none
+    border: 1px solid #B4632E
+    font-weight: 600
+    display: block
     &:hover
-        opacity: 0.85
-        background: linear-gradient(180deg, #BB1015 0%, #E31E24 100%)
+        background-color: #B4632E
+        color:$white
+.btn-photo-contest
+    position: absolute
+    right: 12px
+    top: 0
+    width:280px
+.btn-red
+    background: linear-gradient(90deg, #BB1015 1.84%, #E31E24 100%)
+    box-shadow: 0px 4px 60px 0px rgba(255, 191, 0, 0.52)
+    color:$white
+    &:hover
+        opacity: 0.6
 .btn-white
     border: 2px solid $white
     background-color: transparent
@@ -115,7 +136,6 @@
     padding-left: 49.5px
     padding-right: 49.5px
 
-
 .contact-form-btn
     margin-top: 15px
     padding: 16px 90px 22px 90px
@@ -141,7 +161,9 @@
 .w-100p
     width: 100%
 
-@media screen and (max-width: 1023px)
+@media screen and (max-width: 1100px)
+    .btn-lk-prize
+        margin-left: 240px
     .btn-icon
         margin-right: 6px
         width: 16px
@@ -155,11 +177,22 @@
         font-size: 12px
     .btn-blue
         margin-bottom: 30px
-@media screen and (max-width: 767px)
+@media screen and (max-width: 768px)
+    .btn-header
+        width: auto
+        height: auto
+        padding: 15px
+        img
+            margin:0
+    .btn-photo-contest
+        width: 100%
+        position: static
+        margin-top: 20px
     .btn
         padding: 10px 40px 15px 40px
         font-size: 20px
-
+    .btn-lk-prize
+        margin-left: 0
     .my-account-btn
         width: 30px
         height: 30px

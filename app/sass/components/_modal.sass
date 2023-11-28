@@ -1,7 +1,7 @@
 .modal
     z-index: 2
 .modal-dialog
-    max-width: 430px
+    max-width: 450px
 .modal-backdrop.show
     z-index: 1
 .modal-lg
@@ -21,29 +21,28 @@
     line-height: 10px
     padding: 0
     margin: 0
+
     &:hover
-        background-color: #1D6233
+        background-color: $brown
 .modal-content
-    border-radius: 10px
-    background: linear-gradient(90deg, #02521C 0%, #047328 50.52%, #034E1B 100%)
-    box-shadow: 0px 4px 44px 0px rgba(0, 0, 0, 0.25)
+    border-radius: 16px
+    background: linear-gradient(89deg, #8A4C07 0.93%, #C2671D 50.45%, #8A4C07 99.98%)
+    border: 0
 .modal-title
-    font-size: 42px
-    color: $white
-    font-family: LC-Chalk
-    font-size: 52px
+    font-size: 62px
     text-align: center
     font-style: normal
-    font-weight: 400
-    line-height: 90%
-    margin-top: 8px
+    font-weight: 700
+    line-height: 120%
+    text-transform: uppercase
+    letter-spacing: -1.24px
     margin-bottom: 36px
 .modal-title-sm
     font-size: 32px
-    font-family: LC-Chalk
-    color: $white
+    font-weight: 700 
+    text-transform: uppercase
     margin-bottom:  32px
-    line-height: 90%
+    line-height: 120%
 .modal-title-reg
     margin-top: 1px
 .modal-bottom
@@ -68,6 +67,9 @@
     letter-spacing: -0.32px
     display: block
     margin-top: 10px
+    &:hover
+        color: $white
+        opacity: 0.8
 .modal-link-lg
     color: $white
     font-size: 20px

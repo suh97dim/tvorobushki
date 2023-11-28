@@ -6,103 +6,137 @@ block title
 block variables
     - var page = 'index'
 block content
+    .side-img-wrapper
+        img(src="../img/main-banner-right.png").img-rigth
+        img(src="../img/main-banner-left.png").img-left
     .container 
         .row 
-            .col.d-flex.justify-content-center
-                +img('bg/main-banner-center.png','','','893')
-                +img('bg/main-banner-right.png','','main-banner-right','635')
-    .container.mt-80.mt-lg-200
-        .row.how-do
-            .col-sm-12.text-center
-                h2.gold-lg Как участвовать 
-            .col-sm-6.col-lg-4
-                .how-do__item 
-                    +img('step-1.png')
-                    .step-count 01
-                    h4.gold.text-center Покупайте
-                    .par-20.text-center.c-green-light любой продукт бренда «Махеевъ» из <a href="/">списка</a> минимум на 300 руб в одном чеке. 
-                    .blur-bg
-            .col-sm-6.col-lg-4
-                .how-do__item  
-                    +img('step-2.png' )
-                    .step-count 02
-                    h4.gold.text-center Регистрируйте чек
-                    .par-20.text-center.c-green-light в личном кабинете на промо-сайте kupi-maheev.ru или через чат-бот Telegram<a target="_blank" href="https://t.me/kupi_maheev_bot"> @kupi_maheev_bot. </a>
-                    .blur-bg
-            .col-sm-6.col-lg-4.touch-center
-                .how-do__item 
-                    +img('step-3.png' )
-                    .step-count 03
-                    h4.gold.text-center Выигрывайте
-                    .par-20.text-center.c-green-light крутые призы от МахеевЪ.
-                    .blur-bg
-            .col-12 
-                button.btn.gold-border.mx-auto.mt-50 
-                    +img('icons/download.svg')
-                    span.gold.ml-15 Зарегистрировать чек
-    .container-fluid.py-80.py-md-100.chat-bot-bg 
-        .container 
+            .col.d-flex.align-items-center.flex-column
+                .main-banner-top-wrapper
+                    img(src="../img/main-banner-top.png").img-top
+                .main-banner-bottom-wrapper
+                    img(src="../img/main-banner-bottom.png").img-bottom
+            .col-12
+                .par-20.c-brown.text-center.mt-20 с 01 декабря 2023 года по 12 января 2024 года 
+                button.btn.btn-red.contact-form-btn.mx-a.mt-50 Отправить
+    .container-fluid.rules
+        .container
             .row
-                .col
-                    .chat-bot
-                        .row
-                            .col-12.col-md-5 
-                                h3 С чат-ботом <br> участвовать проще!
-                            .col-12.col-md-7  
-                                ol.list-group-numbered
-                                    li.list-group-item.chat-bot__li  <strong>Покупайте </strong> «МахеевЪ» в ТС «Монетка» и сохраняйте чеки с «7» ноября 2023 года по «08» января 2024 года
-                                    li.list-group-item.chat-bot__li  <strong>Сфотографируйте QR-код  </strong> чека и загрузите его на сайте или в чат-бот Telegram <a target="_blank" href="https://t.me/kupi_maheev_bot"> @kupi_maheev_bot. </a>
-                                    li.list-group-item.chat-bot__li  <strong> Найти бот  </strong>  можно по названию @kupi_maheev_bot, отправить любое сообщение в бот и следовать дальнейшим инструкциям.
+                .col-sm-12.text-center
+                    h2
+                        span.gold-text-linear Правила акции
+                .col-sm-6.col-lg-4
+                    .d-flex
+                        +img('icons/rule-icon-1.svg','','rules-icon')
+                        .d-flex.flex-column.mt-50.ml-20
+                            h4 
+                                span.gold-text-linear 1. Купите
+                            .par-20.c-white минимум 5&nbsp;&laquo;Творобушков&raquo; в&nbsp;магазинах &laquo;Пятёрочка&raquo;
+                .col-sm-6.col-lg-4
+                    .d-flex
+                        +img('icons/rule-icon-2.svg','','rules-icon')
+                        .d-flex.flex-column.mt-50.ml-20
+                            h4 
+                                span.gold-text-linear 2. Зарегистрируйте
+                            .par-20.c-white чек на&nbsp;промосайте <br> promo-tvorobushki.ru
+                .col-sm-6.col-lg-4.touch-center
+                    .d-flex
+                        +img('icons/rule-icon-2.svg','','rules-icon')
+                        .d-flex.flex-column.mt-50.ml-20
+                            h4 
+                                span.gold-text-linear 3. Участвуйте
+                            .par-20.c-white в&nbsp;розыгрышах призов и&nbsp;фотоконкурсе в&nbsp;VK
 
-
-    .container
-        .row#prizes
-            .col-sm-12.text-center
-                h2.gold-lg Выигрывайте призы 
-            .col-12.col-sm-6.col-xs-12.col-md-4
-                .prize
-                    +img('prize-1.png','','img-fluid','')
-                    .prize-details  
-                        h4.gold Ежедневные
-                        ul
-                            li.win-prize.par-16 Сертификат 1000 Р в магазин «Монетка»
-            .col-12.col-sm-6.col-xs-12.col-md-4.mt-24.mt-sm-0
-                .prize
-                    +img('prize-2.png','','img-fluid','')
-                    .prize-details 
-                        h4.gold Еженедельные
-                        ul
-                            li.win-prize.par-16 Умная колонка Алиса
-                            li.win-prize.par-16 Пароочиститель KARCHER SC 1 EasyFix
-                            li.win-prize.par-16 Мини проектор
-            .col-12.col-sm-6.col-xs-12.col-md-4.touch-center.mt-24.mt-md-0
-                .prize 
-                    +img('prize-3.png','','img-fluid','')
-                    .prize-details 
-                        h4.gold Ежемесячные
-                        ul
-                            li.win-prize.par-16 Телевизор Яндекс с Алисой диаг 43,
-                            li.win-prize.par-16 Электрогриль Tefal Optigrill
-                            li.win-prize.par-16 Кофемашина брендированная
-
-            .col-12.mt-30.mt-md-70
-                .main-prize
-                    h3.gold.text-center Главный приз «Сертификат» на 
-                    +img('main-prize-main.png','','')
+                .col-12 
+                    button.btn-sm.btn-red.mx-a.mt-50 
+                        +img('icons/download-rules.svg','','mr-15') 
+                        | Полные правила акции
+            .row.mt-100
+                .col-sm-12.text-center
+                    h2
+                        span.gold-text-linear Правила акции
+            .row.mt-100 
+                .col-md-6.col-lg-4
+                    .prize.text-center
+                        +img("lk-prizes/lk-prize-1.png",'Сертификат') 
+                        .par-20.c-cream Гарантированный призы
+                        h3.mt-12  
+                            span.gold-text-linear 50 Р на телефон
+                .col-md-6.col-lg-4.mt-40.mt-md-0
+                    .prize.text-center
+                        +img("lk-prizes/lk-prize-2.png",'Сертификат') 
+                        .par-20.c-cream Баллы на карту «Х5 Клуба
+                        h3.mt-12 
+                            span.gold-text-linear 5000 баллов
+                .col-md-6.col-lg-4.mt-40.mt-lg-0.touch-center
+                    .prize.text-center
+                        +img("lk-prizes/lk-prize-5.png",'Сертификат') 
+                        .par-20.c-cream Специальные призы
+                        h3.mt-12  
+                            span.gold-text-linear бытовая техника
+                .col-12.mt-24
+                    .main-prize-lk
+                        +img("lk-prizes/lk-main-prize.png",'Сертификат')
+                        span
+                            .main-prize-header.c-cream главный приз
+                            .par-24.c-cream Сертификат на путешествие всей семьей номиналом 
+                            .main-prize-nominal
+                                div.gold-text-linear 200&nbsp;000&nbsp;Рㅤ
+        .container-fluid
+            +img('/bg/tests.svg','','img-fluid w-100')
+    //- .container-fluid.py-90.photo-contest-index
+    //-     .container.position-relative
+    //-         .row
+    //-             .col-12.col-sm-6 
+    //-                 +img('photo-contest-img.png','','img-fluid')
+    //-             .col-12.col-sm-6 
+    //-                 h2.mt-90 
+    //-                     div.brown-text-linear Участвуйте в&nbsp;фотоконкурсе&nbsp;ВК
+    .container-fluid.products.py-90
+        .container.position-relative
+            .row
+                .col.text-center
+                    h2 
+                        div.brown-text-linear Продукты, участвующие в&nbsp;акции
+                    .row.px-15.px-md-30   
+                        .swiper-products
+                            .swiper-wrapper
+                                .swiper-slide.text-center
+                                    +img('products/product-1.png','','img-fluid')
+                                    .par-20.c-brown.fw-semibold Сырок творожный глазированный «Творобушки» 20% ваниль в темной глазури
+                                    .par-20.c-brown.mt-10 40 г
+                                .swiper-slide 
+                                    +img('products/product-2.png','','img-fluid')
+                                    .par-20.c-brown.fw-semibold Сырок творожный глазированный «Творобушки» 20% ваниль в темной глазури
+                                    .par-20.c-brown.mt-10 40 г
+                                .swiper-slide 
+                                    +img('products/product-3.png','','img-fluid')
+                                    .par-20.c-brown.fw-semibold Сырок творожный глазированный «Творобушки» 20% ваниль в темной глазури
+                                    .par-20.c-brown.mt-10 40 г
+                                .swiper-slide 
+                                    +img('products/product-4.png','','img-fluid')
+                                    .par-20.c-brown.fw-semibold Сырок творожный глазированный «Творобушки» 20% ваниль в темной глазури
+                                    .par-20.c-brown.mt-10 40 г
+                                .swiper-slide 
+                                    +img('products/product-4.png','','img-fluid')
+                                    .par-20.c-brown.fw-semibold Сырок творожный глазированный «Творобушки» 20% ваниль в темной глазури
+                                    .par-20.c-brown.mt-10 40 г
+            .slider-control
+                .swiper-products-prev
+                .swiper-products-next
     .container-fluid.green-bg.py-60.py-lg-100#winner 
         .container
             .row 
-                .col-sm-12
-                    h2.gold-lg.text-center Победители
+                .col-sm-12.text-center.d-flex.justify-content-center
+                    +img('/icons/winners-icon.svg','','winners-icon  mt-0 mt-sm-10')
+                    h2
+                        div.brown-text-linear.ml-16 Победители
             .row 
                 .col-12.col-lg-8
                     .winners-nav 
-                        button.table-btn.active(data-prize) 
-                            span.gold Ежедневный
-                        button.table-btn(data-prize)  
-                            span.gold Еженедельный
-                        button.table-btn(data-prize)  
-                            span.gold Суперприз
+                        button.table-btn.active(data-prize)  Ежедневный
+                        button.table-btn(data-prize) Еженедельный
+                        button.table-btn(data-prize) Суперприз
                 .col-12.col-lg-4.my-30.m-lg-0
                     .winners-search 
                         button.winners-search__btn 
@@ -110,7 +144,7 @@ block content
             .row
                 .col
 
-                    table#winners 
+                    table#tableWinners
                         thead 
                             tr.trow.th-row 
                                 th.th-column.th-data Дата розыгрыша
@@ -158,11 +192,15 @@ block content
                                 td.t-column.table-name В******
                                 td.t-column.table-city Санкт-Петербург
                                 td.t-column.table-phone +7 (999) *** ** 99)
-    .container-fluid.gold-bg.py-60.py-lg-100#faq  
+
+
+
+
+    .container-fluid.brown-bg-linear.py-60.py-lg-100#faq   
         .container
             .row
                 .col-sm-12
-                    h2.c-brown.text-center Вопросы и ответы
+                    h2.c-white.text-center Вопросы и ответы
                 .col-md-7 
                     #faqData.qa-wrapper
                         .qa-wrapper-scroll 
@@ -198,13 +236,13 @@ block content
                                 .qa-details
                 .col-md-5 
                     .contact-form
-                        h4.c-brown Нет ответа на ваш вопрос?
-                        .par-16.c-brown Отправьте нам сообщение, мы обязательно ответим 
+                        h4.c-white Нет ответа на ваш вопрос?
+                        .par-16.c-white Отправьте нам сообщение, мы обязательно ответим 
                         form(action="") 
                             input(type="text" placeholder="Имя").text-input
                             input(type="text" placeholder="Фамилия").text-input
                             input(type="email" placeholder="E-mail").text-input
                             textarea(placeholder="Текст сообщения")
-                            button.btn.green-btn.contact-form-btn 
+                            button.btn.btn-red.contact-form-btn 
                                 span.gold Отправить
 

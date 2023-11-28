@@ -1,11 +1,6 @@
 include /mixins/__mixins
 
 block variables 
-//- - var spritePath = 'img/icons/sprite/svg/sprite.svg#'
-//- - var imgIcons = 'img/icons/'
-//- - var imgPath = 'img/'
-//- - var themeColor = '#red'
-//- - var themeColor2 = '#F9F9F9'
 
 doctype html
 html(lang="ru")
@@ -25,21 +20,16 @@ html(lang="ru")
         link(href="#" color=`${themeColor}` rel="mask-icon")
         link(type='text/css' href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet")
         link(type='text/css' href="libs/datepicker-bootstrap/datepicker.min.css" rel="stylesheet")
-        //- link(type='text/css' href="libs/DataTables/datatables.min.css" rel="stylesheet")
         link(type='text/css' href="libs/croppie/croppie.css" rel="stylesheet")
-        link(type='text/css' href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" rel="stylesheet")
         link(type='text/css' href="libs/swiper/swiper-bundle.min.css" rel="stylesheet")
         link(type='text/css' href="libs/fancybox/fancybox.css" rel="stylesheet")
         link(type='text/css' href="css/main.min.css" rel="stylesheet")
-
-
-
         body
-        .o-h.pos-r
             include /modules/header
             block content
-            //- include /modules/footer
-            //- include /modules/modals
+            include /modules/footer
+            include /modules/modals
+
         script(src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous")
         script(src='libs/bootstrap/js/bootstrap.bundle.min.js')
         script(src='libs/bootstrap-fileinput/js/fileinput.min.js')
@@ -54,5 +44,3 @@ html(lang="ru")
         script(src='libs/swiper/swiper-bundle.min.js')
         script(src='libs/fancybox/fancybox.js')
         script(src='js/scripts.js')
-
-    block script

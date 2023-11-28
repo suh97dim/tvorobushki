@@ -1,67 +1,66 @@
+.row
+    .col 
+        .you-buy-block.mb-30.mb-md-70  
+            .col-auto.my-0.my-md-20
+                ul.c-white.m-0 
+                    li.par-18 5 шт = Гарантированный приз 
+                    li.par-18.mt-4 5 шт = 10 шт = заявка на 5 000 баллов на карту Х5 Клуба
+                    li.par-18.mt-4 15 шт = заявка на Специальные призы
+                    li.par-18.mt-4 20 шт = заявка на Суперприз
+            .col-auto 
+                .line
+            .col-auto
+                .d-flex.align-items-center.flex-wrap
+                    .you-buy-block-title Вы купили:
+                    div.you-buy-block-title.gold-text-linear.mx-10 12 
+                    +img('icons/x.svg')
+                    +img('lk-product.png', 'Продукт','lk-product ml-16')
+                .par-14.mt-10 количестве продукции в подтвержденных чеках в штуках
 .row 
     .col-12 
-        .lk-tab-title.text-center Зарегистрировать чек
-.row 
-    .col-12.gold.text-center.mb-40
-        .lk-step 
+        .lk-tab-title.text-center
+            span.gold-text-linear Зарегистрировать чек
+.row#step-1 
+    .col-12.gold.text-center.mb-20.mb-md-40
+        .lk-step.m-0 
             .lk-step-box Шаг 1. Загрузите фото
-//- .row#step-1
-//-     .col-12.col-md-5.col-lg-6
-//-         label.upload-photo(for="file-receipt") 
-//-             +img('icons/upload-receipt.svg')
-//-             |Загрузить фото чека
-//-         input#file-receipt(type="file" accept="image/*" )
-//-     .col-12.col-md-7.col-lg-6.mt-24.mt-md-0 
-//-         h5.gold К регистрации в Акции принимаются чеки, если:
-//-         ul
-//-             li.li-lk фото чека качественное, чек сфотографирован полностью, не стоит загружать фотографию только QR кода
-//-             li.li-lk данные, указанные на чеке, такие как дата покупки, время покупки, итого по сумме чека, №ФН, №ФД, №ФПД введены правильно
-//-             li.li-lk кассовый чек должен быть выбит кассиром в период c 11.10.2021 по 28.11.2021
-//-             li.li-lk все символы должны быть четко видны
-//-             li.li-lk наличие QR-кода на кассовом чеке обязательно, он должен быть читаемый
-//-             li.li-lk в чеке должно отображаться наименование Акционной продукции
-//- test
-.row#step-1
     .col-12.col-lg-6
         .file-upload
             input.bootstrap-file-upload(type="file" data-browse-on-zone-click="true")
-        //- <div class="row mb-10">
-        //-                             <div class="col-lg-6 mb-30">
-        //-                                 <div class="file-upload">
-        //-                                     <input class="bootstrap-file-upload" type="file"
-        //-                                         data-browse-on-zone-click="true">
-        //-                                 </div>
-        //-                             </div>
-    .col-12.col-lg-6.mt-24.mt-md-0 
-        h5.gold К регистрации в Акции принимаются чеки, если:
+    .col-12.col-lg-6.mt-24.mt-xl-0
+        h5.text-transform-none
+            span.gold-text-linear К регистрации в Акции принимаются чеки, если:
         ul
             li.li-lk фото чека качественное, чек сфотографирован полностью, не стоит загружать фотографию только QR кода
-            li.li-lk данные, указанные на чеке, такие как дата покупки, время покупки, итого по сумме чека, №ФН, №ФД, №ФПД введены правильно
+            li.li-lk данные, указанные на чеке, такие как дата покупки, время покупки, итого по сумме чека,<span class="font-arial"> №</span> ФН,<span class="font-arial"> №</span> ФД, <span class="font-arial"> №</span> ФПД введены правильно
             li.li-lk кассовый чек должен быть выбит кассиром в период c 11.10.2021 по 28.11.2021
             li.li-lk все символы должны быть четко видны
             li.li-lk наличие QR-кода на кассовом чеке обязательно, он должен быть читаемый
             li.li-lk в чеке должно отображаться наименование Акционной продукции
-//- test
-
+    .col-12.mt-24
+        button.btn-lk.btn-red.mx-a(type="submit") Далее
 .row#step-2
-    .col-12.d-flex.justify-content-center 
-        #img-crop
-
-    .col 
-        .row
-            .col-md-12.col-lg-3
-            .col-md-6.col-lg-3.mt-20 
-                button.btn-lk.btn-red#other-photo.mx-a.w-100
-                    span.gold Другое фото
-            .col-md-6.col-lg-3.mt-20 
-                button.btn-lk.btn-white.mx-a.w-100 Регистрация чека
-            .col-md-12.col-lg-3
-    .col-12.mt-60 
-        h5.gold.text-center Если QR-код не распознается и фискальные признаки не считываются, то введите данные вручную.
-        .d-flex.justify-content-center
+    .col-12.gold.text-center.mb-30.mb-md-40
+        .lk-step 
+            .lk-step-box Шаг 2. Внесите данные с чека
+    .col-12.croppie-wrapper
+        ul.nav.nav-lk-regChek
+            li.nav-lk-item
+                a(href='#tabPhoto' data-bs-toggle="tab").nav-lk-regChek-link.active Фото
+            li.nav-lk-item
+                a(href='#tabVideo' data-bs-toggle="tab").nav-lk-regChek-link Камера
+        .row 
+            .tab-content
+                #tabPhoto.tab-pane.fade.active.show
+                    div.mt-24 | Фото 
+                #tabVideo.tab-pane.fade
+                    div.mt-24 | Камера
+    .col-12.mt-40.mt-md-60.px-20.px-lg-160
+        .par-24.text-center.c-white Если QR-код не распознается и фискальные признаки не считываются, то введите данные вручную.
+        .d-flex.justify-content-center.mt-18
             a.fiskal-link.mx-a(type="button" data-bs-toggle="modal" data-bs-target="#modal-fiskal") Где найти фискальные данные на чеке?
     .col
-        form.row.needs-validation.px-0.px-lg-80.mt-40(novalidate)
+        form.row.needs-validation.px-0.px-lg-80.mt-30.mx-0.mx-lg-80(novalidate)
             .col-sm-6.col-md-4.mb-24
                 input(type="text" placeholder="ФН" required ).form-control
                 .invalid-feedback Укажите ФН
@@ -80,14 +79,13 @@
             .col-sm-6.col-md-4.mb-24
                 input(type="text" placeholder="Время покупки" required ).form-control
                 .invalid-feedback Укажите время покупки
-            .col-md-4  
-            .col-md-4.mb-24
-                button.btn-lk.btn-red.w-100.px-0#nalog(type="submit") 
-                    span.gold Сохранить данные
+            .col-12
+                button.btn-lk.btn-red.w-100.px-0(type="submit") Зарегистрировать чек
             .col-md-4
 .row.mt-30.mt-md-70 
     .col-12 
-        .lk-tab-title.text-center Зарегистрированные чеки
+        h4.text-center
+            span.gold-text-linear Зарегистрированные чеки
 .row 
     .col-12 
         .receved-code-table__wrapper
@@ -170,11 +168,3 @@
                                 |Смотреть
                         td
                             .status.status_wait В процессе
-.row 
-    .col 
-        .my-receipt-footer
-            +img('lk-footer.svg' )
-            span
-                .par-16 Чеки не суммируются, т.е. если в одном чеке акционной продукции менее, чем на 300 руб. он не будет участвовать в формировании заявок
-                .par-16 Заявка формируется в момент подтверждения чека Организатором.
-                .par-16 Каждая заявка участвует в розыгрыше каждого вида Приза до момента выигрыша или выхода за период сбора заявок на розыгрыш.
