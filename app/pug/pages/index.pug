@@ -16,10 +16,9 @@ block content
                     .main-banner-top-wrapper
                         +img("main-banner-top.png",'','img-top')
                     .main-banner-bottom-wrapper
-
                         +img("main-banner-bottom.png",'','img-bottom')
                 .col-12
-                    .par-20.c-brown.text-center.mt-160.mt-lg-20 с 01 декабря 2023 года по 12 января 2024 года 
+                    .par-20.c-brown.text-center.mt-160.mt-lg-20.fw-bold с 01 декабря 2023 года по 12 января 2024 года 
                     button.btn.btn-red.mx-a.mt-30.mt-lg-50#reg-button(type="button" data-bs-toggle="modal" data-bs-target="#modal-reg") Зарегистрироваться
     .container-fluid.rules
         .container
@@ -43,17 +42,17 @@ block content
                             .par-20.c-white чек на&nbsp;промосайте <br> promo-tvorobushki.ru
                 .col-sm-6.col-md-4.touch-center
                     .rules-item.mt-30.mt-md-0
-                        +img('icons/rule-icon-2.svg','','rules-icon')
+                        +img('icons/rule-icon-3.svg','','rules-icon')
                         .d-flex.flex-column.mt-20.ml-lg-20
                             h4 
                                 span.gold-text-linear 3. Участвуйте
                             .par-20.c-white в&nbsp;розыгрышах призов <br> и&nbsp;фотоконкурсе в&nbsp;VK
 
                 .col-12 
-                    button.btn-sm.btn-red.mx-a.mt-50 
+                    a(href="upload/rules.pdf").btn-sm.btn-red.mx-a.mt-50 
                         +img('icons/download-rules.svg','','mr-15') 
                         | Полные правила акции
-    .container-fluid.win-prize
+    .container-fluid.win-prize#prizes
         .container.pt-60.pt-md-100.position-relative
             +img('/bg/chocolate-bg.png','','rules-bg')  
             .row
@@ -63,32 +62,30 @@ block content
             .row.mt-40.pt-lg-100
                 .col-md-6.col-lg-4
                     .prize.text-center
-                        +img("lk-prizes/lk-prize-1.png",'Сертификат') 
+                        +img("lk-prizes/lk-prize-1.png",'Гарантированный призы') 
                         .par-20.c-cream Гарантированный призы
                         h3.mt-12  
                             div.gold-text-linear 50 Р на телефон
                 .col-md-6.col-lg-4.mt-40.mt-md-0
                     .prize.text-center
-                        +img("lk-prizes/lk-prize-2.png",'Сертификат') 
+                        +img("lk-prizes/lk-prize-2.png",'Баллы на карту «Х5 Клуба') 
                         .par-20.c-cream Баллы на карту «Х5 Клуба
                         h3.mt-12 
                             div.gold-text-linear 5000 баллов
                 .col-md-6.col-lg-4.mt-40.mt-lg-0.touch-center
                     .prize.text-center
-                        +img("lk-prizes/lk-prize-7.png",'Сертификат') 
+                        +img("lk-prizes/lk-prize-7.png",'Специальные призы') 
                         .par-20.c-cream Специальные призы
                         h3.mt-12  
                             div.gold-text-linear бытовая техника
                 .col-12.mt-24.touch-center
                     .main-prize
-                        +img("lk-prizes/lk-main-prize.png",'Сертификат')
+                        +img("lk-prizes/lk-main-prize.png",'главный приз')
                         span
                             .main-prize-header.c-cream главный приз
                             .par-24.c-cream Сертификат на путешествие всей семьей номиналом 
                             .main-prize-nominal
                                 div.gold-text-linear 200&nbsp;000&nbsp;Р
-        //- .container-fluid(style="mmargin-top:")
-        //-     +img('/bg/tests.svg','','img-fluid w-100')
     .container-fluid.photo-contest-index.pb-50
         .container.position-relative
             .row
@@ -98,7 +95,7 @@ block content
                     h2.mt-sm-30.mt-lg-90.mb-20 
                         div.brown-text-linear Участвуйте в <br>  фотоконкурсе&nbsp;ВК
                     .par-24.c-brown и выигрывайте фотоаппарат мгновенной печати Polaroid
-                    a.btn.btn-red.mt-20.mt-lg-40 Участвововать
+                    a(href="").btn.btn-red.mt-20.mt-lg-40 Участвововать
     .container-fluid.products.py-60.py-lg-100
         .container.position-relative
             .row
@@ -199,10 +196,6 @@ block content
                                 td.t-column.table-name В******
                                 td.t-column.table-city Санкт-Петербург
                                 td.t-column.table-phone +7 (999) *** ** 99)
-
-
-
-
     .container-fluid.brown-bg-linear#faq
         .container.py-60.py-lg-100.position-relative
             +img('/bg/chocolate-bg.png','','faq-bg')   
@@ -215,9 +208,6 @@ block content
                             .qa-item.default-active.active
                                 .qa-title В какие сроки проводится Акция? 
                                 .qa-details Призы, стоимость которых превышает 4 000 (четыре тысячи) руб., облагаются налогом в размере 35%.Налог на Еженедельные призы, Приз за участие в конкурсе в интерактиве и Главный приз оплачивает организатор акции, который, как налоговый агент, на основании поручения от победителя, удержит в соответствие с требованиями законодательства РФ НДФЛ по ставке 35%.Гарантированные приз в виде баллов на счет карты лояльности «Х5 Клуб» не облагаются налогом в соответствии со ст. 217 НК РФ.  
-                                    |ds 
-                                    |dsdsd 
-                                    <br> dsdsd
                             .qa-item
                                 .qa-title Какой продукт необходимо купить, чтобы принять участие? 
                                 .qa-details
@@ -244,12 +234,16 @@ block content
                                 .qa-details
                 .col-md-5 
                     .contact-form
-                        h4.c-white Нет ответа на ваш вопрос?
-                        .par-16.c-white Отправьте нам сообщение, мы обязательно ответим 
-                        form(action="") 
-                            input(type="text" placeholder="Имя").text-input
-                            input(type="text" placeholder="Фамилия").text-input
-                            input(type="email" placeholder="E-mail").text-input
-                            textarea(placeholder="Текст сообщения")
-                            button.btn.btn-red.mt-20.mt-lg-40 Участвововать
+                        h4.c-white.text-transform-none.fw-light Нет ответа на ваш вопрос?
+                        .par-16.c-white.opacity-50 Отправьте нам сообщение, мы обязательно ответим 
+                        form(action="").validate.mt-10 
+                            input(type="text" placeholder="Имя" validate is-invalid).text-input
+                            input(type="text" placeholder="Фамилия" validate is-invalid).text-input
+                            input(type="email" placeholder="E-mail" validate is-invalid).text-input
+                            textarea(placeholder="Текст сообщения" validate is-invalid)
+                            .form-group 
+                                .form-check
+                                    input.form-check-input(type="checkbox" id="flexCheckChecked") 
+                                    label.form-check-label(for="flexCheckChecked").c-white.par-16  Я согласен (-а) на обработку и хранение персональных данных
+                            button.btn.btn-red.mt-20.mt-lg-40(type="submit") Задать вопрос
 

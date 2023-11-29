@@ -17,6 +17,7 @@
     max-width: 343px
     font-weight: 700
     letter-spacing: -0.48px
+    
 .btn-anim
     animation: btn_grow 2.3s infinite
     &:hover
@@ -59,6 +60,8 @@
     font-weight: 600
     display: block
     letter-spacing: -0.32px
+    justify-content: center
+    display: flex
 .btn-lk
     padding: 10px 29px 15px 29px
     color: $white
@@ -94,27 +97,10 @@
     &:hover
         opacity: 0.9
         color:$white
-.btn-white
-    border: 2px solid $white
-    background-color: transparent
+    &:active
+        border: 1px solid #FC3944!important
+        color: $white!important
 
-    &:hover
-        opacity: 0.85
-        background-color: $white
-
-.gold-border
-    border: 1px solid #D99B53
-    color: $white
-    &:hover
-        opacity: 0.7
-        border: 1px solid #D99B53
-.dark-btn
-    background-color: #071C49
-    &:hover
-        opacity: 0.7
-.btn-transparent
-    border: 1px solid #FFF
-    background-color: transparent
 .btn-icon
     margin-right: 5px
     width: 25px
@@ -132,47 +118,10 @@
     margin: 0 auto
     padding: 23.5px 0 21.5px
     line-height: 107%
-.download-icon
-    width: 20px
-    height: 20px
-    color: #E77E1D !important
-    fill: #E77E1D !important
-.download-btn
-    color: #E77E1D !important
-    font-size: 17.655px
-    font-family: Golos
-    font-weight: 700
-    letter-spacing: -0.706px
-    text-decoration: none
-    margin-top: 34px
-    margin-left: -9px
-    margin-bottom: 89px
-.vote-btn
-    padding-top: 18px
-    padding-bottom: 18px
-.px-49
-    padding-left: 49.5px
-    padding-right: 49.5px
-
 .contact-form-btn
     margin-top: 15px
     padding: 16px 90px 22px 90px
-.btn-modal
-    padding: 22px
-    width: 100%
-    color: #FFF
-    text-align: center
-    font-size: 14px
-    font-weight: 500
-    line-height: normal
-    letter-spacing: 0.7px
-    text-transform: uppercase
-    border: none
-    border-radius: 60px
-    border-radius: 80px
-    background: #071C49
-    &:hover
-        background-color: #FF8925
+
 .logout-btn
     padding: 17px 29px 17px 28px
 
@@ -187,14 +136,6 @@
         width: 16px
         height: 16px
         margin-top: 2px
-    .dark-btn
-        padding-top: 16px!important
-        padding-bottom: 16px!important
-    .vote-btn
-        padding: 15px 30px !important
-        font-size: 12px
-    .btn-blue
-        margin-bottom: 30px
 @media screen and (max-width: 768px)
     .btn-header
         width: auto

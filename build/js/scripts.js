@@ -106,7 +106,6 @@ $(function () {
   });
 
 
-  // scroll to id
   $(".js-scroll-to").on("click", function (e) {
     e.preventDefault();
     var id = $(this).attr("href").replace("#", "");
@@ -139,24 +138,11 @@ Array.prototype.slice.call(forms)
   })
 
 window.addEventListener("load", function () {
-  // console.log('sd')
-  // $("#top").animate({ top: 0, opacity: 1 }, 200)
-  // $("#bottom").animate({ top: 0, opacity: 1 }, 200)
-
   $(".img-top").addClass('img-top-anim')
   $(".img-bottom").addClass('img-top-anim')
   $(".img-rigth").addClass('img-rigth-anim')
   $(".img-left").addClass('img-left-anim')
-  // $('#top').animate({
-  //   opacity: 1,
-  //   top: 0
-  // }, {
-  //   duration: 200,
-  //   specialEasing: {
-  //     opacity: 'swing',
-  //     top: 'linear'
-  //   }
-  // });
+  $("#reg-button").addClass('btn-anim')
 });
 
 const swiper = new Swiper('.swiper-products', {

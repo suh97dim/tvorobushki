@@ -54,8 +54,8 @@
               </div>
             </div>
             <div class="col-12">
-              <div class="par-20 c-brown text-center mt-160 mt-lg-20">с 01 декабря 2023 года по 12 января 2024 года </div>
-              <button class="btn btn-red mx-a mt-30 mt-lg-50">Отправить</button>
+              <div class="par-20 c-brown text-center mt-160 mt-lg-20 fw-bold">с 01 декабря 2023 года по 12 января 2024 года </div>
+              <button class="btn btn-red mx-a mt-30 mt-lg-50" id="reg-button" type="button" data-bs-toggle="modal" data-bs-target="#modal-reg">Зарегистрироваться</button>
             </div>
           </div>
         </div>
@@ -83,22 +83,19 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 touch-center">
-              <div class="rules-item mt-30 mt-md-0"><img class="rules-icon" src="img/icons/rule-icon-2.svg" alt=""/>
+              <div class="rules-item mt-30 mt-md-0"><img class="rules-icon" src="img/icons/rule-icon-3.svg" alt=""/>
                 <div class="d-flex flex-column mt-20 ml-lg-20">
                   <h4> <span class="gold-text-linear">3. Участвуйте</span></h4>
                   <div class="par-20 c-white">в&nbsp;розыгрышах призов <br> и&nbsp;фотоконкурсе в&nbsp;VK</div>
                 </div>
               </div>
             </div>
-            <div class="col-12"> 
-              <button class="btn-sm btn-red mx-a mt-50"> <img class="mr-15" src="img/icons/download-rules.svg" alt=""/>Полные правила акции
-              </button>
-            </div>
+            <div class="col-12"> <a class="btn-sm btn-red mx-a mt-50" href="upload/rules.pdf"> <img class="mr-15" src="img/icons/download-rules.svg" alt=""/>Полные правила акции</a></div>
           </div>
         </div>
       </div>
-      <div class="container-fluid win-prize pt-60 pt-md-100">
-        <div class="container">
+      <div class="container-fluid win-prize" id="prizes">
+        <div class="container pt-60 pt-md-100 position-relative"><img class="rules-bg" src="img//bg/chocolate-bg.webp" alt=""/>
           <div class="row">
             <div class="col-sm-12 text-center">
               <h2>
@@ -106,9 +103,9 @@
               </h2>
             </div>
           </div>
-          <div class="row mt-40 pt-md-100">
+          <div class="row mt-40 pt-lg-100">
             <div class="col-md-6 col-lg-4">
-              <div class="prize text-center"><img src="img/lk-prizes/lk-prize-1.webp" alt="Сертификат"/>
+              <div class="prize text-center"><img src="img/lk-prizes/lk-prize-1.webp" alt="Гарантированный призы"/>
                 <div class="par-20 c-cream">Гарантированный призы</div>
                 <h3 class="mt-12"> 
                   <div class="gold-text-linear">50 Р на телефон</div>
@@ -116,7 +113,7 @@
               </div>
             </div>
             <div class="col-md-6 col-lg-4 mt-40 mt-md-0">
-              <div class="prize text-center"><img src="img/lk-prizes/lk-prize-2.webp" alt="Сертификат"/>
+              <div class="prize text-center"><img src="img/lk-prizes/lk-prize-2.webp" alt="Баллы на карту «Х5 Клуба"/>
                 <div class="par-20 c-cream">Баллы на карту «Х5 Клуба</div>
                 <h3 class="mt-12"> 
                   <div class="gold-text-linear">5000 баллов</div>
@@ -124,7 +121,7 @@
               </div>
             </div>
             <div class="col-md-6 col-lg-4 mt-40 mt-lg-0 touch-center">
-              <div class="prize text-center"><img src="img/lk-prizes/lk-prize-5.webp" alt="Сертификат"/>
+              <div class="prize text-center"><img src="img/lk-prizes/lk-prize-7.webp" alt="Специальные призы"/>
                 <div class="par-20 c-cream">Специальные призы</div>
                 <h3 class="mt-12"> 
                   <div class="gold-text-linear">бытовая техника</div>
@@ -132,7 +129,7 @@
               </div>
             </div>
             <div class="col-12 mt-24 touch-center">
-              <div class="main-prize"><img src="img/lk-prizes/lk-main-prize.webp" alt="Сертификат"/><span>
+              <div class="main-prize"><img src="img/lk-prizes/lk-main-prize.webp" alt="главный приз"/><span>
                   <div class="main-prize-header c-cream">главный приз</div>
                   <div class="par-24 c-cream">Сертификат на путешествие всей семьей номиналом </div>
                   <div class="main-prize-nominal">
@@ -152,7 +149,7 @@
               <h2 class="mt-sm-30 mt-lg-90 mb-20"> 
                 <div class="brown-text-linear">Участвуйте в <br>  фотоконкурсе&nbsp;ВК</div>
               </h2>
-              <div class="par-24 c-brown">и выигрывайте фотоаппарат мгновенной печати Polaroid</div><a class="btn btn-red mt-20 mt-lg-40">Участвововать</a>
+              <div class="par-24 c-brown">и выигрывайте фотоаппарат мгновенной печати Polaroid</div><a class="btn btn-red mt-20 mt-lg-40" href="">Участвововать</a>
             </div>
           </div>
         </div>
@@ -288,8 +285,8 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid brown-bg-linear py-60 py-lg-100" id="faq">  
-        <div class="container">
+      <div class="container-fluid brown-bg-linear" id="faq">
+        <div class="container py-60 py-lg-100 position-relative"><img class="faq-bg" src="img//bg/chocolate-bg.webp" alt=""/>
           <div class="row">
             <div class="col-sm-12">
               <h2 class="c-white text-center">Вопросы и ответы</h2>
@@ -299,10 +296,7 @@
                 <div class="qa-wrapper-scroll"> 
                   <div class="qa-item default-active active">
                     <div class="qa-title">В какие сроки проводится Акция? </div>
-                    <div class="qa-details">
-                      Призы, стоимость которых превышает 4 000 (четыре тысячи) руб., облагаются налогом в размере 35%.Налог на Еженедельные призы, Приз за участие в конкурсе в интерактиве и Главный приз оплачивает организатор акции, который, как налоговый агент, на основании поручения от победителя, удержит в соответствие с требованиями законодательства РФ НДФЛ по ставке 35%.Гарантированные приз в виде баллов на счет карты лояльности «Х5 Клуб» не облагаются налогом в соответствии со ст. 217 НК РФ.  ds 
-                      dsdsd <br> dsdsd
-                    </div>
+                    <div class="qa-details">Призы, стоимость которых превышает 4 000 (четыре тысячи) руб., облагаются налогом в размере 35%.Налог на Еженедельные призы, Приз за участие в конкурсе в интерактиве и Главный приз оплачивает организатор акции, который, как налоговый агент, на основании поручения от победителя, удержит в соответствие с требованиями законодательства РФ НДФЛ по ставке 35%.Гарантированные приз в виде баллов на счет карты лояльности «Х5 Клуб» не облагаются налогом в соответствии со ст. 217 НК РФ.  </div>
                   </div>
                   <div class="qa-item">
                     <div class="qa-title">Какой продукт необходимо купить, чтобы принять участие? </div>
@@ -341,13 +335,20 @@
             </div>
             <div class="col-md-5"> 
               <div class="contact-form">
-                <h4 class="c-white">Нет ответа на ваш вопрос?</h4>
-                <div class="par-16 c-white">Отправьте нам сообщение, мы обязательно ответим </div>
-                <form action=""> 
-                  <input class="text-input" type="text" placeholder="Имя">
-                  <input class="text-input" type="text" placeholder="Фамилия">
-                  <input class="text-input" type="email" placeholder="E-mail">
-                  <textarea placeholder="Текст сообщения"></textarea>
+                <h4 class="c-white text-transform-none fw-light">Нет ответа на ваш вопрос?</h4>
+                <div class="par-16 c-white opacity-50">Отправьте нам сообщение, мы обязательно ответим </div>
+                <form class="validate mt-10" action=""> 
+                  <input class="text-input" type="text" placeholder="Имя" validate is-invalid>
+                  <input class="text-input" type="text" placeholder="Фамилия" validate is-invalid>
+                  <input class="text-input" type="email" placeholder="E-mail" validate is-invalid>
+                  <textarea placeholder="Текст сообщения" validate is-invalid></textarea>
+                  <div class="form-group"> 
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="flexCheckChecked">
+                      <label class="form-check-label c-white par-16" for="flexCheckChecked"> Я согласен (-а) на обработку и хранение персональных данных</label>
+                    </div>
+                  </div>
+                  <button class="btn btn-red mt-20 mt-lg-40" type="submit">Задать вопрос</button>
                 </form>
               </div>
             </div>

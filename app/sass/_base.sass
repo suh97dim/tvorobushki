@@ -9,9 +9,6 @@ body
 	background-position: top center
 	background-repeat: no-repeat
 	background-size: 1440px auto
-
-	
-
 .faq-bg
 	position: absolute
 	z-index: 0
@@ -25,11 +22,12 @@ body
 	top: -160px
 	width: 513px
 .photo-contest-index
-	// background-image: url(../img/bg/photo-contest-bg.png)
-	// background-position: top center
-	// background-repeat: no-repeat
-	// background-size: 100% auto
 	background-color: #F5BC00
+	
+	background-image: url(../img/bg/photo-contest-bg.jpg)
+	background-position: top center
+	background-repeat: no-repeat
+	background-size: 1440px auto
 	margin-top: -2px
 .winners-icon
 	width: 80px
@@ -59,7 +57,6 @@ body
 	background-size: 1440px auto
 .container-fluid
 	padding: 0
-
 #winner
 	background-image: url('../img/bg/winner-bg.jpg')
 	background-size: 1920px auto
@@ -81,7 +78,6 @@ body
 	background-position: bottom center
 	background-repeat: no-repeat
 	padding-bottom: 170px
-
 .win-prize
 	background-color: #8A4C07
 	background-image: url(../img/bg/photo-contest-bottom-bg.svg)
@@ -90,8 +86,6 @@ body
 	background-repeat: no-repeat
 	bottom: 0
 	margin-top: -2px
-	
-
 .side-img-wrapper
 	width: 100%
 	height: 1000px
@@ -319,12 +313,6 @@ h5
 		margin: 0 auto
 		top: -125px
 		max-width: 280px
-#prizes
-	background-image: url('../img/bg/prize-bg2.png')
-	background-size: 870px
-	background-position-x: center
-	background-position-y: 49%
-	background-repeat: no-repeat
 .prize-details
 	padding: 25px
 	box-sizing: border-box
@@ -333,7 +321,7 @@ h5
 	border: 1px solid #C76C15
 	background: linear-gradient(107deg, #582111 0.49%, #B16527 49.21%, #582111 100%)
 	box-shadow: 0px 4px 68px 0px #DF863A
-	padding: 30px 40px
+	padding: 30px 70px 30px 30px
 	display: flex
 	justify-content: space-between
 	align-items: center
@@ -349,28 +337,14 @@ h5
 .main-prize
 
 	img
-		width: 600px
+		width: 550px
 		margin: 0 auto
 		display: block
-		padding-bottom: 50px
+		
 ul
 	list-style-position: outside
 	list-style: none
 	padding: 0
-li.win-prize
-
-	// padding-left: 15px
-	margin-bottom: 8px
-	margin-left: 20px
-	position: relative
-	// color: $green-light
-	&::before
-		content: '•'
-		// color: $green-light
-		position: absolute
-
-		width: 2px
-		left: -20px
 .qa-wrapper
 	background: $white
 	padding: 40px
@@ -422,12 +396,12 @@ li.win-prize
 	&::-webkit-scrollbar-thumb
 		-webkit-border-radius: 2px
 		border-radius: 2px
-		background-color: #023111
+		background-color: #CFCFCF
 
 .qa-wrapper-scroll
 	&::-webkit-scrollbar-thumb:hover
 		cursor: pointer !important
-		background-color: #023111
+		background-color: #CFCFCF
 
 .qa-wrapper-scroll
 	&::-webkit-resizer
@@ -494,7 +468,8 @@ input#search
 	line-height: 100%
 	letter-spacing: -0.32px
 	&:focus
-		o-color: #071C49
+		color: #FFF6D8
+		border: none
 	&::-webkit-input-placeholder
 		color: #FFF6D8
 	&::-moz-placeholder
@@ -525,6 +500,8 @@ td
 #tableWinners
 	td,th
 		color: $brown
+	th
+		font-weight: 700
 	thead
 		border-bottom: 2px solid $brown
 thead
@@ -540,7 +517,6 @@ thead
 	width: 299px!important
 .th-phone
 	width: 335px!important
-
 a.page-link
 	display: flex
 	width: 48px
@@ -554,9 +530,7 @@ a.page-link
 	font-size: 20px
 	&:hover
 		color: $white!important
-		// background-color: $green!important
 .page-item.active .page-link
-	// color: $green!important
 	background-color: $brown !important
 #tableWinners_wrapper
 	a.page-link
@@ -617,14 +591,11 @@ ul.pagination
 .tooltip-inner
 	max-width: 350px
 	width: 350px
-
 .font-arial
 	font-family: Arial, Helvetica, sans-serif
 	font-weight: 500
-
 @media screen and (max-width: 1360px)
 	.swiper-products-next
-
 		right: 10px
 	.swiper-products-prev
 		left: 10px
@@ -662,7 +633,7 @@ ul.pagination
 			margin: 0 auto
 			top: -70px
 			max-width: 280px
-
+			width: 100%
 	.img-rigth
 		width: 635px
 		top: 320px
@@ -672,18 +643,6 @@ ul.pagination
 		left: 0
 		right: 0
 		transform: translate(830px) rotate(90deg)
-		text-align: center
-		opacity: 0
-
-	#img-rigth
-		width: 40%
-		top: 520px
-		position: absolute
-		margin-left: auto
-		margin-right: auto
-		left: 0
-		right: 0
-		transform: translate(500px) rotate(90deg)
 		text-align: center
 		opacity: 0
 	.img-left-anim
@@ -718,22 +677,14 @@ ul.pagination
 			top: 300px
 	.touch-center
 		margin: 0 auto
-	#prizes
-		background-image: url('../img/bg/prize-bg2.png')
-		background-size: 870px
-		background-position-x: center
-		background-position-y: 49%
-		background-repeat: no-repeat
 	.prize-details
 		padding: 25px
 		box-sizing: border-box
-
 	.main-prize
 		img
 			width: 54%
 			margin: 0 auto
 			display: block
-			padding-bottom: 45px
 	.qa-item
 		.qa-title
 			font-size: 16px
@@ -743,7 +694,6 @@ ul.pagination
 			padding: 0 20px 20px 40px
 	.qa-wrapper
 		padding: 20px
-
 	.contact-form
 		margin-left: 10px
 	.winners-search
@@ -754,32 +704,6 @@ ul.pagination
 		border-radius: 16px
 	#tableWinners_wrapper
 		border-radius: 16px
-	.chat-bot-bg
-		background-image: url('../img/bg/chat-bot-bg.png')
-		background-size: 100%
-		background-repeat: no-repeat
-		background-position: bottom center
-	.list-group-numbered
-		padding: 0
-	.main-banner
-		height: 1000px
-		height: 1000px
-		position: absolute
-		overflow: hidden
-		width: 100%
-		top: 0
-		right: 0
-		left: 0
-		display: block
-		margin: 0 auto
-		background-repeat: no-repeat
-		background-size: 60% auto
-		background-position: 55vw 0%
-		background-image: url(../img/bg/v.png)
-		position: absolute
-		top: 0
-		z-index: -1
-
 @media screen and (max-width: 768px)
 	.photo-contest-index
 		.par-24
@@ -836,10 +760,6 @@ ul.pagination
 			top: 300px
 	h2
 		font-size: 62px
-	.how-do__item
-		padding: 0 30px
-	.step-count
-		font-size: 40px
 	.contact-form
 		margin-left: 20px
 	.contact-form
@@ -847,11 +767,12 @@ ul.pagination
 		margin-top: 30px
 	.main-prize
 		flex-direction: column
+		padding: 30px
 		img
-			width: 54%
+			width: 70%
 			margin: 0 auto
 			display: block
-			padding-bottom: 5vw
+
 
 	#tableWinners_wrapper
 		border-radius: 16px
@@ -869,11 +790,7 @@ ul.pagination
 	.table-btn
 		padding: 14px 0 18px 0
 		border-radius: 16px
-	.chat-bot
-		padding: 30px
 @media screen and (max-width: 575px)
-	.photo-contest-index
-		
 	.main-block
 		padding-bottom: 80px
 	.rules-icon
@@ -910,12 +827,14 @@ ul.pagination
 	.main-prize
 		max-width: 360px
 		margin: 0 auto
-		gap: 0px
+		padding: 25px
+		gap: 20px
 		.par-24
 			font-size: 18px
 		img
 			width: 100%
 			display: block
+		
 	.main-prize-header 
 		font-size: 36px
 		letter-spacing: -2px
